@@ -1,0 +1,145 @@
+body{
+    background-color: #000000;
+    color: white;
+}
+
+h1,h2,h3{
+    color: rgb(212, 175, 55);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.encabezado {
+    font-size: large;
+    font-style: initial;
+    font-weight: bolder;
+}
+
+.encabezado h1 {
+    text-align: center;
+    color: rgb(212, 175, 55);
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    max-width: 400px;
+    margin: 20px 35%;
+}
+.encabezado h1:hover {
+    text-align: center;
+    background-color: rgb(212, 175, 55);
+    color: rgb(18, 18, 18);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgb(212, 175, 55) ;
+}
+
+.encabezado nav {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgb(212, 175, 55);
+}
+
+.encabezado ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(212, 175, 55);
+    border-radius: 20px;
+}
+
+.encabezado li a {
+    color: rgb(212, 175, 55);
+    font-size: 25px;
+    padding: 8px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.encabezado li a:hover {
+    background-color: rgb(212, 175, 55);
+    color: rgb(18, 18, 18);
+    transform: scale(1.05);
+}
+
+.encabezado p {
+    font-size: 20px;
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid rgb(212,175,55);
+    margin-top: 80px;
+}
+
+footer h3 {
+    color: rgb(212, 175, 55);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* CONTENEDOR GENERAL DE LAS DOS TARJETAS */
+
+.contenedor-contactos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* TARJETAS */
+
+.contenedorfooter {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    min-height: 180px;
+    padding: 20px;
+    background-color: #111;
+    border: 2px solid goldenrod;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+}
+
+/* ENLACES DENTRO DE LAS TARJETAS */
+
+.contenedorfooter a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+    border: 1px solid rgb(212, 175, 55);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.contenedorfooter a:hover {
+    color: goldenrod;
+    transform: scale(1.03);
+}
+
+.iconoIG {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
