@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <a href="../index.html"><h1>MARGARITA COCINA</h1></a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Abuela Hambrienta</title>
+
+<style>
+       
+body {
+
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div id="info">Puntos: 0</div>
+<canvas id="game"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let puntos = 0;
+
+const abuela = {
+    x: canvas.width / 2,
+    y: canvas.height - 120,
+    width: 80,
+    height: 100,
+    speed: 8
+};
+
+const comidas = [];
+const emojis = ["🍎", "🍕", "🍔", "🌭", "🍩", "🍓", "🥐"];
+
+const teclas = {};
+
+document.addEventListener("keydown", e => {
+    teclas[e.key] = true;
+});
+
+document.addEventListener("keyup", e => {
+    teclas[e.key] = false;
+});
+
+function crearComida() {
+    comidas.push({
+        x: Math.random() * (canvas.width - 40),
+        y: -50,
+        size: 40,
+        speed: 2 + Math.random() * 4,
+        emoji: emojis[Math.floor(Math.random() * emojis.length)]
+    });
+}
+
+setInterval(crearComida, 700);
+
+function actualizar() {
+
+    if (teclas["ArrowLeft"]) {
+        abuela.x -= abuela.speed;
+    }
+
+    if (teclas["ArrowRight"]) {
+        abuela.x += abuela.speed;
+    }
+
+    if (abuela.x < 0) abuela.x = 0;
+    if (abuela.x > canvas.width - abuela.width)
+        abuela.x = canvas.width - abuela.width;
+
+    for (let i = comidas.length - 1; i >= 0; i--) {
+        const c = comidas[i];
+
+        c.y += c.speed;
+
+        const colision =
+            c.x < abuela.x + abuela.width &&
+            c.x + c.size > abuela.x &&
+            c.y < abuela.y + abuela.height &&
+            c.y + c.size > abuela.y;
+
+        if (colision) {
+            comidas.splice(i, 1);
+            puntos++;
+            document.getElementById("info").textContent =
+                "Puntos: " + puntos;
+        } else if (c.y > canvas.height + 50) {
+            comidas.splice(i, 1);
+        }
+    }
+}
+
+function dibujarAbuela() {
+    ctx.font = "90px serif";
+    ctx.fillText("👵", abuela.x, abuela.y + 80);
+}
+
+function dibujarComidas() {
+    ctx.font = "40px serif";
+
+    comidas.forEach(c => {
+        ctx.fillText(c.emoji, c.x, c.y);
+    });
+}
+
+function dibujar() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    dibujarAbuela();
+    dibujarComidas();
+}
+
+function loop() {
+    actualizar();
+    dibujar();
+    requestAnimationFrame(loop);
+}
+
+loop();
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>

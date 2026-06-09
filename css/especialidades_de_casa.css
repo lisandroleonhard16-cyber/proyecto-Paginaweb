@@ -1,0 +1,28 @@
+.receta {
+    width: 90%;
+    margin: 30px auto;
+    background-color: rgb(25, 25, 25);
+    border: 2px solid rgb(212, 175, 55);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.receta summary {
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+    padding: 20px;
+}
+
+.receta summary img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.receta summary h2 {
+    margin-top: 15px;
+    color: rgb(212, 175, 55);
+    font-size: 32px;
+}

@@ -16,11 +16,15 @@ a{
     font-size: large;
     font-style: initial;
     font-weight: bolder;
+    border-bottom: 20px solid rgb(212,175,55);
+    border-bottom-style: ridge;
+    border-bottom-style: double;
 }
 
 .encabezado h1 {
     text-align: center;
     color: rgb(212, 175, 55);
+    font-size: 36px;
     padding: 10px;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -33,6 +37,7 @@ a{
     color: rgb(18, 18, 18);
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgb(212, 175, 55) ;
+    
 }
 
 .encabezado nav {
@@ -83,8 +88,10 @@ a{
 footer {
     padding: 40px 20px;
     text-align: center;
-    border-top: 2px solid rgb(212,175,55);
-    margin-top: 80px;
+    border-top: 20px solid rgb(212,175,55);
+    border-top-style: ridge;
+    border-top-style: double;
+    margin-top: 60px;
 }
 
 footer h3 {
