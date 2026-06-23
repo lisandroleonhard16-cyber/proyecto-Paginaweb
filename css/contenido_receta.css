@@ -1,0 +1,124 @@
+/* CONTENEDOR GENERAL DE LA RECETA */
+
+.contenido_receta{
+    width: 85%;
+    margin: 30px auto;
+    padding: 30px;
+
+    background-color: rgb(25,25,25);
+
+    border: 2px solid rgb(212,175,55);
+    border-radius: 15px;
+
+    box-shadow: 0 0 20px rgba(212,175,55,0.35);
+}
+
+/* TITULOS */
+
+.contenido_receta h3{
+    color: rgb(212,175,55);
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-align: left;
+}
+
+/* HISTORIA */
+
+.historia{
+    margin-bottom: 40px;
+}
+
+.historia p{
+    color: white;
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 18px;
+}
+
+/* INGREDIENTES */
+
+.ingredientes{
+    margin-bottom: 40px;
+}
+
+.ingredientes table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.ingredientes th,
+.ingredientes td{
+    border-bottom: 1px solid rgba(212,175,55,0.3);
+    padding: 12px;
+    text-align: left;
+}
+
+.ingredientes th{
+    color: rgb(212,175,55);
+    font-size: 18px;
+}
+
+.ingredientes td{
+    color: white;
+}
+
+/* PASOS */
+
+.pasos{
+    margin-top: 20px;
+}
+
+.pasos ol{
+    padding-left: 25px;
+}
+
+.pasos li{
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: white;
+}
+
+/* TARJETA DESPLEGABLE */
+
+.receta{
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* CABECERA */
+
+.receta summary{
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
+
+.receta summary::-webkit-details-marker{
+    display: none;
+}
+
+/* FOTO */
+
+.receta summary img{
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgb(212,175,55);
+}
+
+/* TITULO */
+
+.receta summary h2{
+    color: rgb(212,175,55);
+    margin-top: 15px;
+    font-size: 32px;
+}
+
+/* EFECTO */
+
+.receta summary:hover img{
+    box-shadow: 0 0 20px rgba(212,175,55,0.6);
+    transition: 0.3s;
+}

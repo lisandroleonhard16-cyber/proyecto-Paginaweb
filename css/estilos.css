@@ -19,6 +19,10 @@ a{
     border-bottom: 20px solid rgb(212,175,55);
     border-bottom-style: ridge;
     border-bottom-style: double;
+    
+}
+body{
+    margin: 0;
 }
 
 .encabezado h1 {
@@ -67,12 +71,14 @@ a{
     border-radius: 10px;
     transition: all 0.3s ease;
     display: inline-block;
+    
 }
 
 .encabezado li a:hover {
     background-color: rgb(212, 175, 55);
     color: rgb(18, 18, 18);
     transform: scale(1.05);
+    
 }
 
 .encabezado p {
