@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
-    
-    <head>
+<head>
         <title>Margarita Cocina</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/estilos.css">  
-        <link rel="stylesheet" href="../css/receta_tradicional.css">  
-    </head>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/receta_tradicional.css">
+        <link rel="stylesheet" href="../css/contenido_receta.css">
+</head>
+<body>
+    <header class="encabezado">
+        <a href="../index.html"><h1>MARGARITA COCINA</h1></a>
 
-    <body>
-        <header class="encabezado">
-            <a href="../index.html"><h1>MARGARITA COCINA</h1></a></li>
+        <nav>
+            <ul>
+                <li><a href="receta_tradicional.html">Recetas Tradicionales</a></li>
+                <li><a href="especialidad_casa.html">Especialidades de la casa</a></li>
+                <li><a href="receta_rapida.html">Recetas Rapidas</a></li>
+                <li><a href="postres.html">Postres</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
 
-            <nav>
-                <ul>
-                    <li><a href="receta_tradicional.html">Recetas Tradicionales</a></li>
-                    <li><a href="especialidad_casa.html">Especialidades de la casa</a></li>
-                    <li><a href="receta_rapida.html">Recetas Rapidas</a></li>
-                    <li><a href="postres.html">Postres</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <main class="carrusel">
-            <div class="contenedor-recetas">
-            <details class="receta">
-             <summary>
-                    <img src="../imagenes/pizzamargarita.jpg" alt="pizza">
-                    <h2>PIZZA MARGHERITA</h2>
-             </summary>
+        <!--========== PIZZA MARGHERITA ==========-->
 
-            <section>
-                <h2>Pizza Margherita</h2>
-            
-                <h3>Ingredientes</h3>
-                <table>
+        <details class="receta">
+            <summary>
+                <img src="../imagenes/pizzamargarita.jpg" alt="Pizza Margarita">
+                <h2>PIZZA MARGHERITA</h2>
+            </summary>
 
+            <section class="contenido_receta">
+
+                <div class="historia">
+                    <h3>Historia de la pizza margherita</h3>
+                    <p>
+                        La Pizza Margherita constituye un emblema de la gastronomía italiana,
+                        particularmente de la región de Nápoles, y posee raíces históricas
+                        que remiten a finales del siglo XIX. Según la tradición, fue creada
+                        en 1889 en honor a la reina Margherita de Saboya, con colores que
+                        representan la bandera italiana: el rojo del tomate, el blanco del
+                        queso y el verde del orégano.
+
+                        Se caracteriza por una masa fina y esponjosa que se elabora con
+                        harina, agua, levadura, aceite y sal, cubierta con salsa de tomate
+                        y queso fundido, condimentada con orégano a gusto, y que se cocina
+                        al horno hasta obtener un dorado uniforme en los bordes.
+                    </p>
+                </div>
+
+                <div class="ingredientes">
+                    <h3>Ingredientes (1 pizza)</h3>
+                    <table>
                         <tr>
-                            <th>Ingredientes</th>
-                            <th>Cantidades</th>
+                            <th>Ingrediente</th>
+                            <th>Cantidad</th>
                         </tr>
                         <tr>
                             <td>Harina</td>
-                            <td>500 Gramos</td>
+                            <td>500 g</td>
                         </tr>
                         <tr>
                             <td>Agua</td>
                             <td>300 ml</td>
                         </tr>
-
                         <tr>
                             <td>Levadura</td>
-                            <td>25 Gramos</td>
+                            <td>25 g</td>
                         </tr>
                         <tr>
                             <td>Aceite</td>
-                            <td>2 cucharadas soperas</td>
+                            <td>2 cucharadas</td>
                         </tr>
                         <tr>
                             <td>Sal</td>
-                            <td>Cucharada chiquita</td>
+                            <td>1 cucharadita</td>
                         </tr>
                         <tr>
                             <td>Salsa de tomate</td>
@@ -67,88 +84,102 @@
                         </tr>
                         <tr>
                             <td>Queso</td>
-                            <td>300 Gramos</td>
+                            <td>300 g</td>
                         </tr>
                         <tr>
-                            <td>Oregano (opcional)</td>
-                            <td>A gusto arriba del Queso</td>
+                            <td>Orégano (opcional)</td>
+                            <td>A gusto</td>
                         </tr>
-                </table>
-                <h3>Paso a Paso hecho a mano</h3>
-                        <p>1. Preparar la levadura
-                        Coloca los 25 g de levadura en un recipiente.
-                        Agrega un poco de los 300 ml de agua tibia y mezcla hasta disolverla.</p>
-                        <p>
-                        2. Hacer la masa
-                        Coloca los 500 g de harina en un bowl grande.
-                        Agrega la cucharadita de sal y mezcla.
-                        Añade la levadura disuelta, el resto del agua y las 2 cucharadas de aceite.
-                        Mezcla todos los ingredientes hasta formar una masa.</p>
-                        <p>
-                        3. Amasar
-                        Coloca la masa sobre una mesa limpia y amasa durante unos 10 minutos, hasta que quede lisa y elástica.
-                        </p>
-                        <p>
-                        4. Dejar levar
-                        Forma una bola con la masa y colócala en un recipiente.
-                        Cúbrela con un paño limpio.
-                        Déjala reposar entre 45 minutos y 1 hora, hasta que duplique su tamaño.</p>
-                        <p>
-                        5. Formar la pizza
-                        Precalienta el horno a 220 °C.
-                        Aceita una pizzera o bandeja para horno.
-                        Estira la masa con las manos o un palo de amasar hasta darle la forma deseada.
-                        Colócala en la pizzera.
-                        </p>
-                        <p>
-                        6. Prehornear la masa
-                        Lleva la masa al horno durante 8 a 10 minutos para que tome consistencia.
-                        </p>
-                        <p>
-                        7. Agregar los ingredientes
-                        Retira la masa del horno.
-                        Distribuye los 200 ml de salsa de tomate sobre la superficie.
-                        Agrega los 300 g de queso de manera uniforme.
-                        Si lo deseas, espolvorea orégano por encima.
-                        </p>
-                        <p>
-                        8. Hornear
-                        Vuelve a llevar la pizza al horno.
-                        Cocina durante 10 a 15 minutos, o hasta que el queso esté derretido y los bordes estén dorados.
-                        <p>
-                        9. Servir
-                        Retira la pizza del horno.
-                        Déjala reposar 2 o 3 minutos.
-                        Córtala en porciones y sírvela caliente.
-                        </p>    
-                        <p>
-                        🍕 Tiempo total aproximado: 1 hora y 30 minutos (incluyendo el levado de la masa).</p>
-                <h3>Paso a Paso Video</h3>
-                <a href="https://www.youtube.com/watch?v=GBIIQ0kP15E">Paso a Paso</a>
+                    </table>
+                </div>
+
+                <div class="pasos">
+                    <h3>Paso a paso</h3>
+                    <ol>
+                        <li>
+                            Colocar los 25 g de levadura en un recipiente, agregar un poco
+                            de agua tibia y mezclar hasta disolverla completamente.
+                        </li>
+                        <li>
+                            Colocar la harina en un bowl grande, agregar la sal y mezclar.
+                            Añadir la levadura disuelta, el resto del agua y el aceite.
+                        </li>
+                        <li>
+                            Mezclar todos los ingredientes hasta formar una masa y amasar
+                            durante 10 minutos, hasta que quede lisa y elástica.
+                        </li>
+                        <li>
+                            Formar una bola con la masa, colocarla en un recipiente cubierto
+                            con un paño y dejar reposar entre 45 minutos y 1 hora.
+                        </li>
+                        <li>
+                            Precalentar el horno a 220°C. Aceitar la pizzera y estirar la
+                            masa hasta darle la forma deseada.
+                        </li>
+                        <li>
+                            Llevar la masa al horno durante 8 a 10 minutos para que tome
+                            consistencia.
+                        </li>
+                        <li>
+                            Retirar del horno y distribuir la salsa de tomate sobre la
+                            superficie. Agregar el queso de manera uniforme y espolvorear
+                            orégano si se desea.
+                        </li>
+                        <li>
+                            Hornear a 220°C durante 10 a 15 minutos, hasta que el queso
+                            esté derretido y los bordes estén dorados.
+                        </li>
+                        <li>
+                            Dejar reposar 2 a 3 minutos, cortar en porciones y servir
+                            caliente.
+                        </li>
+                    </ol>
+                </div>
+
             </section>
-            </details>
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-            <details class="receta">
-                <summary>
-                    <img src="../imagenes/pollo horno papass.jpg" alt="pollo">
-                    <h2>POLLO AL HORNO CON PAPAS</h2>
-                </summary>
-             <h2>Como cocinar Pollo al horno con papas</h2>
-                    
-                <h3>Ingredientes</h3>
+        </details>
+
+        <!--========== POLLO AL HORNO CON PAPAS ==========-->
+
+        <details class="receta">
+            <summary>
+                <img src="../imagenes/pollohorno.jpg" alt="Pollo al Horno con Papas">
+                <h2>POLLO AL HORNO CON PAPAS</h2>
+            </summary>
+
+            <section class="contenido_receta">
+
+                <div class="historia">
+                    <h3>Historia del Pollo al Horno con Papas</h3>
+                    <p>
+                        El pollo al horno con papas es uno de los platos más populares y arraigados
+                        de la cocina casera argentina y de gran parte del mundo occidental. Su origen
+                        se remonta a las tradiciones culinarias europeas, donde asar aves junto a
+                        vegetales de raíz en un mismo recipiente era una técnica habitual por su
+                        sencillez y rendimiento.
+
+                        En Argentina, esta preparación se convirtió en un clásico del almuerzo
+                        dominical, presente en hogares de todo el país. Se caracteriza por marinarse
+                        con ajo, aceite, pimentón y especias, logrando una piel dorada y crujiente
+                        por fuera y una carne jugosa por dentro, acompañada de papas tiernas que
+                        absorben todos los jugos de la cocción.
+                    </p>
+                </div>
+
+                <div class="ingredientes">
+                    <h3>Ingredientes (2 porciones)</h3>
                     <table>
                         <tr>
-                            <th>Ingredientes</th>
-                            <th>Cantidades</th>
+                            <th>Ingrediente</th>
+                            <th>Cantidad</th>
                         </tr>
                         <tr>
                             <td>Pollo (patas-muslos o pechugas)</td>
                             <td>2 unidades</td>
                         </tr>
                         <tr>
-                            <td>Papas</td>
-                            <td>4 medianas</td>
+                            <td>Papas medianas</td>
+                            <td>4 unidades</td>
                         </tr>
                         <tr>
                             <td>Ajo</td>
@@ -156,95 +187,175 @@
                         </tr>
                         <tr>
                             <td>Aceite de oliva</td>
-                            <td>2 cucharadas soperas</td>
+                            <td>2 cucharadas</td>
                         </tr>
                         <tr>
                             <td>Sal</td>
-                            <td>Al gusto</td>
+                            <td>A gusto</td>
                         </tr>
                         <tr>
                             <td>Pimienta</td>
-                            <td>Al gusto</td>
+                            <td>A gusto</td>
                         </tr>
                         <tr>
                             <td>Pimentón (opcional)</td>
-                            <td>Al gusto</td>
+                            <td>A gusto</td>
                         </tr>
                     </table>
-                <h3>Paso a Paso hecho a mano</h3>
-                    <p>1.Precalienta el horno a 200 °C.
-                    <p> 2.Mezcla el aceite, ajo, pimentón, orégano, sal, pimienta y limón.
-                    <p> 3.Unta el pollo con la mezcla por todos lados.
-                    <P> 4.Coloca las papas en una bandeja para horno y sazónalas con un poco de aceite, sal y pimienta.
-                    <p> 5.Pon el pollo sobre las papas.
-                    <p> 6.Hornea durante 60–75 minutos, o hasta que el pollo esté dorado y bien cocido (la temperatura interna debe alcanzar 75 °C).
-                    <p> 7.A mitad de cocción, baña el pollo con sus propios jugos para que quede más jugoso.
-                    <p> 8.Deja reposar 5 minutos antes de servir.
-                    
-                    <p> Consejo:Si quieres más sabor, añade cebolla en gajos, zanahorias o ramas de romero junto con las papas.</p>
-                <h3>Paso a Paso Video</h3>
-                <a href="https://www.youtube.com/watch?v=GBIIQ0kP15E">Paso a Paso</a>
+                </div>
+
+                <div class="pasos">
+                    <h3>Paso a paso</h3>
+                    <ol>
+                        <li>
+                            Precalentar el horno a 200°C.
+                        </li>
+                        <li>
+                            Mezclar el aceite de oliva, ajo picado, pimentón, sal y pimienta
+                            hasta obtener una marinada homogénea.
+                        </li>
+                        <li>
+                            Untar el pollo con la mezcla por todos lados, cubriendo bien
+                            toda la superficie.
+                        </li>
+                        <li>
+                            Pelar y cortar las papas en trozos medianos. Colocarlas en una
+                            bandeja para horno y sazonarlas con aceite, sal y pimienta.
+                        </li>
+                        <li>
+                            Disponer el pollo sobre las papas en la misma bandeja.
+                        </li>
+                        <li>
+                            Hornear durante 60 a 75 minutos, o hasta que el pollo esté dorado
+                            y bien cocido, alcanzando una temperatura interna de 75°C.
+                        </li>
+                        <li>
+                            A mitad de cocción, bañar el pollo con sus propios jugos para
+                            que quede más jugoso.
+                        </li>
+                        <li>
+                            Dejar reposar 5 minutos y servir.
+                        </li>
+                    </ol>
+                </div>
+
             </section>
-            </details>
+        </details>
+
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
            <details class="receta">
                 <summary>
-                    <img src="../imagenes/arroz.jpg" alt="arroz">
+                    <img src="../imagenes/arroz.jpg" alt="Salteado de arroz con verduras y huevo">
                     <h2>SALTEADO DE ARROZ CON VERDURAS Y HUEVO</h2>
                 </summary>
-                <h2>Como cocinar Salteado de arroz con verduras y huevo</h2>
-                    
-                <h3>Ingredientes</h3>
-                    <table>
-                        <tr>
-                            <th>Ingredientes</th>
-                            <th>Cantidades</th>
-                        </tr>
-                        <tr>
-                            <td>Arroz cocido</td>
-                            <td>2 tazas</td>
-                        </tr>
-                        <tr>
-                            <td>Zanahoria</td>
-                            <td>1 unidad</td>
-                        </tr>
-                        <tr>
-                            <td>Cebolla</td>
-                            <td>1 unidad</td>
-                        </tr>
-                        <tr>
-                            <td>Morrón</td>
-                            <td>1 unidad</td>
-                        </tr>
-                        <tr>
-                            <td>Huevos</td>
-                            <td>2 unidades</td>
-                        </tr>
-                        <tr>
-                            <td>Salsa de soja (opcional)</td>
-                            <td>Al gusto</td>
-                        </tr>
-                        <tr>
-                            <td>Aceite</td>
-                            <td>2 cucharadas soperas</td>
-                        </tr>
-                    </table>
-                <h3>Paso a Paso hecho a mano</h3>
-                <p>1.Lava y pela la zanahoria.
-                <p>2.Corta la zanahoria, la cebolla y el morrón en cubitos pequeños.
-                <p>3.Calienta un poco de aceite en una sartén grande a fuego medio.
-                <p>4.Agrega las verduras y saltéalas durante 5 a 7 minutos, hasta que estén tiernas.
-                <p>5.Incorpora las 2 tazas de arroz cocido y mezcla bien con las verduras.
-                <p>6.Empuja la mezcla hacia un lado de la sartén para dejar un espacio libre.
-                <p>Rompe los 2 huevos en el espacio libre y cocínalos revolviendo hasta que estén listos.
-                <p>Mezcla los huevos con el arroz y las verduras hasta integrar todos los ingredientes.
-                <p>Agrega salsa de soja a gusto (opcional) y mezcla nuevamente.
-                <p>Cocina durante 1 o 2 minutos más para que los sabores se integren.
-                <p>Retira del fuego y sirve caliente. 🍚🥕🥚</p>
-                <h3>Paso a Paso video</h3>
-                <a href="https://www.youtube.com/watch?v=GBIIQ0kP15E">Paso a Paso</a>
-            </section>
+
+                <section class="contenido_receta">
+
+                    <div class="historia">
+                        <h3>Historia del Salteado de Arroz con Verduras y Huevo</h3>
+
+                        <p>
+                            El arroz salteado con verduras y huevo es una preparación de raíces
+                            profundamente asiáticas, especialmente asociada a la cocina china y japonesa,
+                            donde el salteado en wok a fuego alto es una técnica milenaria. El plato
+                            conocido como "fried rice" se popularizó globalmente como una forma
+                            práctica de aprovechar el arroz cocido del día anterior.
+
+                            En la cocina casera argentina adoptó esta técnica combinándola con
+                            verduras de estación como zanahoria, cebolla y morrón, convirtiéndose
+                            en una opción rápida, nutritiva y económica para el día a día. La salsa
+                            de soja, ingrediente opcional, le aporta el toque umami que lo hace
+                            inconfundible.
+                        </p>
+                    </div>
+
+                    <div class="ingredientes">
+
+                        <h3>Ingredientes (2 porciones)</h3>
+
+                        <table>
+                            <tr>
+                                <th>Ingrediente</th>
+                                <th>Cantidad</th>
+                            </tr>
+                            <tr>
+                                <td>Arroz cocido</td>
+                                <td>2 tazas</td>
+                            </tr>
+                            <tr>
+                                <td>Zanahoria</td>
+                                <td>1 unidad</td>
+                            </tr>
+                            <tr>
+                                <td>Cebolla</td>
+                                <td>1 unidad</td>
+                            </tr>
+                            <tr>
+                                <td>Morrón</td>
+                                <td>1 unidad</td>
+                            </tr>
+                            <tr>
+                                <td>Huevos</td>
+                                <td>2 unidades</td>
+                            </tr>
+                            <tr>
+                                <td>Aceite</td>
+                                <td>2 cucharadas</td>
+                            </tr>
+                            <tr>
+                                <td>Salsa de soja (opcional)</td>
+                                <td>A gusto</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="pasos">
+
+                        <h3>Paso a paso</h3>
+
+                        <ol>
+                            <li>
+                                Lavar, pelar y cortar la zanahoria, la cebolla y el morrón
+                                en cubitos pequeños.
+                            </li>
+                            <li>
+                                Calentar el aceite en una sartén grande a fuego medio y
+                                agregar las verduras cortadas.
+                            </li>
+                            <li>
+                                Saltear las verduras durante 5 a 7 minutos, hasta que
+                                estén tiernas.
+                            </li>
+                            <li>
+                                Incorporar el arroz cocido y mezclar bien con las verduras
+                                hasta integrar.
+                            </li>
+                            <li>
+                                Empujar la mezcla hacia un lado de la sartén, dejando un
+                                espacio libre en el centro.
+                            </li>
+                            <li>
+                                Romper los huevos en el espacio libre y cocinarlos
+                                revolviendo hasta que estén listos.
+                            </li>
+                            <li>
+                                Mezclar los huevos con el arroz y las verduras hasta
+                                integrar todos los ingredientes.
+                            </li>
+                            <li>
+                                Agregar salsa de soja a gusto si se desea y cocinar
+                                1 a 2 minutos más para integrar los sabores.
+                            </li>
+                            <li>
+                                Retirar del fuego y servir caliente.
+                            </li>
+                        </ol>
+
+                    </div>
+
+                </section>
             </details>
             </div>
     </main>
