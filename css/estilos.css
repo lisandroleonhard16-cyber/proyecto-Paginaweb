@@ -1,32 +1,16 @@
 body{
     background-color: black;
     color: white;
-    background-image: url(../ideas/idea5.png);
-
-    /* Evita que la imagen se duplique si la página es muy larga */
-    background-repeat: no-repeat; 
-    
-    /* Mantiene el fondo fijo mientras el usuario hace scroll */ 
-    background-attachment:fixed; 
-    
-    
-    /* Centra la composición en la pantalla */
-    background-position: center center
-
-    
-    /* Escala la imagen para que cubra toda la pantalla sin deformarse */
-    background-size: cover; 
-    
-    /* Color de respaldo por si la imagen tarda un milisegundo en cargar */
-    background-color: #000000; 
-    
-    /* Margen en cero para que no queden bordes blancos molestos */
-    margin: 0;
-    padding: 0;
+    background-image: url(../ideas/amarillito.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
 }
 
 h1,h2,h3{
     color: rgb(212, 175, 55);
+    text-shadow: 2px 2px 8px black;
 }
 
 a{
