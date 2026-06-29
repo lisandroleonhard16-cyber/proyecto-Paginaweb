@@ -19,14 +19,14 @@ li a:hover {
 {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
+    gap: 50px;
+    margin-top: 20px;
     padding: 20px;
     
 }
 .fuentereceta 
 {
-    width: 35%;
+    width: 37%;
     background-color: rgb(30, 30, 30);
     border-radius: 15px;
     padding: 20px;
@@ -38,7 +38,7 @@ li a:hover {
 {
     text-align: center;
     color: rgb(212, 175, 55);
-    font-size: 32px;
+    font-size: 25px;
     margin-bottom: 20px;
     font-family: "Georgia", serif;
 }
@@ -60,6 +60,7 @@ li a:hover {
     transform: translateY(-5px);
     transition: 0.3s;
 }
+
 
 
 video {
