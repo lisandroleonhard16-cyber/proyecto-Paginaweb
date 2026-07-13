@@ -53,7 +53,7 @@ a{
     width: 90%;
     margin: 20px auto;
     border-radius: 20px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0px 0px 10px rgb(212, 175, 55);
 }
 
@@ -92,6 +92,85 @@ a{
     width: 45%;
     margin: 0 auto;
     line-height: 1.6;
+}
+
+/* MENÚ DESPLEGABLE (Recetas / Dietas Especiales) - sin JS, con checkbox */
+
+.menu-desplegable {
+    position: relative;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-desplegable .menu-toggle {
+    color: rgb(212, 175, 55);
+    font-size: 34px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-desplegable .menu-toggle:hover {
+    background-color: rgb(212, 175, 55);
+    color: rgb(18, 18, 18);
+    transform: scale(1.05);
+}
+
+.flecha {
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.menu-checkbox:checked ~ .menu-toggle .flecha {
+    transform: rotate(180deg);
+}
+
+.encabezado .submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(212, 175, 55);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-top: 10px;
+    list-style: none;
+    box-shadow: 0px 6px 15px rgba(212, 175, 55, 0.4);
+    z-index: 10;
+    justify-content: flex-start;
+}
+
+.encabezado .menu-checkbox:checked ~ .submenu {
+    display: flex;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    display: block;
+    color: rgb(212, 175, 55);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+
+.submenu li a:hover {
+    background-color: rgb(212, 175, 55);
+    color: rgb(18, 18, 18);
+    transform: none;
 }
 
 /* FOOTER */

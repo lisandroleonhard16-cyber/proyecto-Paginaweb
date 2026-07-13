@@ -14,8 +14,29 @@
 
         <nav>
             <ul>
-                <li><a href="html/receta.html">Recetas</a></li>
-                <li><a href="html/dietas_especiales.html">Dietas Especiales</a></li>
+                <li class="menu-desplegable">
+                    <input type="checkbox" id="check-recetas" class="menu-checkbox">
+                    <label for="check-recetas" class="menu-toggle">Recetas <span class="flecha">▾</span></label>
+                    <ul class="submenu">
+                        <li><a href="html/Recetas/pastas.html">Pastas</a></li>
+                        <li><a href="html/Recetas/carnes.html">Carnes</a></li>
+                        <li><a href="html/Recetas/ensaladas.html">Ensaladas</a></li>
+                        <li><a href="html/Recetas/postres.html">Postres</a></li>
+                        <li><a href="html/Recetas/bebidas.html">Bebidas</a></li>
+                    </ul>
+                </li>
+                <li class="menu-desplegable">
+                    <input type="checkbox" id="check-dietas" class="menu-checkbox">
+                    <label for="check-dietas" class="menu-toggle">Dietas Especiales <span class="flecha">▾</span></label>
+                    <ul class="submenu">
+                        <li><a href="html/Dietas espaciales/vegetarianas.html">Vegetarianas</a></li>
+                        <li><a href="html/Dietas espaciales/veganas.html">Veganas</a></li>
+                        <li><a href="html/Dietas espaciales/sintacc.html">Sin TACC</a></li>
+                        <li><a href="html/Dietas espaciales/sinlactosa.html">Sin Lactosa</a></li>
+                        <li><a href="html/Dietas espaciales/sinazucar.html">Sin Azúcar</a></li>
+                        <li><a href="html/Dietas espaciales/altasproteinas.html">Altas en Proteínas</a></li>
+                    </ul>
+                </li>
                 <li><a href="html/nosotros.html">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -25,9 +46,9 @@
     <main>
         
         <section class="destacada">
-            <h2><a href="html/jajas.html">E</a>SPECIALIDAD DE LA CASA: PIZZA MARGARITA</h2>
-            <a href="html/especialidad_casa.html">
-            <img src="imagenes/pizzamargarita.jpg" alt="Pizza Margarita">
+            <h2>ESPECIALIDAD DE LA CASA: PIZZA MARGARITA</h2>
+            <a href="html/receta.html">
+                <img src="imagenes/pizzamargarita.jpg" alt="Pizza Margarita">
             </a>
 
             
