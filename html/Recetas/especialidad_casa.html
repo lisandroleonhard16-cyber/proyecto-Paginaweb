@@ -3,32 +3,58 @@
 <head>
         <title>Margarita Cocina</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/estilos.css">
-        <link rel="stylesheet" href="../css/home.css">
-        <link rel="stylesheet" href="../css/receta_tradicional.css">
-        <link rel="stylesheet" href="../css/contenido_receta.css">
+        <link rel="stylesheet" href="/css/estilos.css">
+        <link rel="stylesheet" href="/css/receta_tradicional.css">
+        <link rel="stylesheet" href="/css/contenido_receta.css">
 </head>
 <body>
     <header class="encabezado">
-        <a href="../index.html"><h1>MARGARITA COCINA</h1></a>
+        <a href="/index.html"><h1>MARGARITA COCINA</h1></a></li>
 
-        <nav>
+         <nav>
             <ul>
-                <li><a href="receta.html">Recetas</a></li>
-                <li><a href="dietas_especiales.html">Dietas Especiales</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
+                <li class="menu-desplegable">
+                    <input type="checkbox" id="check-recetas" class="menu-checkbox">
+                    <label for="check-recetas" class="menu-toggle">Recetas <span class="flecha">▾</span></label>
+                    <ul class="submenu">
+                        
+                        <li><a href="../Recetas/especialidad_casa.html">Especialidad de la casa</a></li>
+                        <li><a href="../Recetas/pastas.html">Pastas</a></li>
+                        <li><a href="../Recetas/carnes.html">Carnes</a></li>
+                        <li><a href="../Recetas/ensaladas.html">Ensaladas</a></li>
+                        <li><a href="../Recetas/postres.html">Postres</a></li>
+                        <li><a href="../Recetas/tragos.html">Tragos</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="menu-desplegable">
+                    <input type="checkbox" id="check-dietas" class="menu-checkbox">
+                    <label for="check-dietas" class="menu-toggle">Dietas Especiales <span class="flecha">▾</span></label>
+                    <ul class="submenu">
+                        <li><a href="../Dietas espaciales/vegetarianas.html">Vegetarianas</a></li>
+                        <li><a href="../Dietas espaciales/veganas.html">Veganas</a></li>
+                        <li><a href="../Dietas espaciales/sintacc.html">Sin TACC</a></li>
+                        <li><a href="../Dietas espaciales/sinlactosa.html">Sin Lactosa</a></li>
+                        <li><a href="../Dietas espaciales/sinazucar.html">Sin Azúcar</a></li>
+                        <li><a href="../Dietas espaciales/altasproteinas.html">Altas en Proteínas</a></li>
+                    </ul>
+                </li>
+                <li><a href="/nosotros.html">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+       <main>
 
         <!--========== PIZZA MARGHERITA ==========-->
 
         <details class="receta">
             <summary>
-                <img src="../imagenes/sin_tacc.png" alt="Pizza Margarita">
+                <img src="/imagenes/pizzamargarita.jpg" alt="Pizza Margarita">
                 <h2>PIZZA MARGHERITA</h2>
             </summary>
 
@@ -143,7 +169,7 @@
 
         <details class="receta">
             <summary>
-                <img src="../imagenes/pollohorno.jpg" alt="Pollo al Horno con Papas">
+                <img src="/imagenes/pollohorno.jpg" alt="Pollo al Horno con Papas">
                 <h2>POLLO AL HORNO CON PAPAS</h2>
             </summary>
 
@@ -246,7 +272,7 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
            <details class="receta">
                 <summary>
-                    <img src="../imagenes/arroz.jpg" alt="Salteado de arroz con verduras y huevo">
+                    <img src="/imagenes/arroz.jpg" alt="Salteado de arroz con verduras y huevo">
                     <h2>SALTEADO DE ARROZ CON VERDURAS Y HUEVO</h2>
                 </summary>
 
@@ -358,8 +384,445 @@
                 </section>
             </details>
             </div>
-    </main>
 
+        <details class="receta">
+
+    <summary>
+        <img src="/imagenes/saltenas-beef-empanadas.jpg" alt="Empanadas">
+        <h2>EMPANADAS SALTEÑAS</h2>
+    </summary>
+
+    <section class="contenido_receta">
+
+        <div class="historia">
+            <h3>Historia de las empanadas</h3>
+
+            <p>
+                Las empanadas salteñas constituyen un emblema de la gastronomía argentina,
+                particularmente de la región noroeste del país, y poseen raíces históricas
+                que remiten a la influencia española y árabe de los panes rellenos que se
+                introdujeron en América durante la época de la colonización.
+
+                Se caracterizan por una masa fina que envuelve un relleno elaborado con
+                carne vacuna picada, cebolla, pimiento, papas, huevos duros y aceitunas,
+                condimentado cuidadosamente con sal, pimienta, pimentón y comino, y que
+                se cocina al horno hasta obtener un dorado uniforme.
+            </p>
+        </div>
+
+        <div class="ingredientes">
+
+            <h3>Ingredientes (1 docena)</h3>
+
+            <table>
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Cantidad</th>
+                </tr>
+
+                <tr>
+                    <td>Carne picada</td>
+                    <td>500 g</td>
+                </tr>
+
+                <tr>
+                    <td>Cebolla blanca</td>
+                    <td>200 g</td>
+                </tr>
+
+                <tr>
+                    <td>Pimentón</td>
+                    <td>100 g</td>
+                </tr>
+
+                <tr>
+                    <td>Papas</td>
+                    <td>2 unidades (150 g)</td>
+                </tr>
+
+                <tr>
+                    <td>Huevo duro</td>
+                    <td>2 unidades</td>
+                </tr>
+
+                <tr>
+                    <td>Aceitunas</td>
+                    <td>12 unidades</td>
+                </tr>
+
+                <tr>
+                    <td>Aceite</td>
+                    <td>2 cucharadas</td>
+                </tr>
+
+                <tr>
+                    <td>Sal</td>
+                    <td>5 g</td>
+                </tr>
+
+                <tr>
+                    <td>Pimienta</td>
+                    <td>1 g</td>
+                </tr>
+
+                <tr>
+                    <td>Pimentón dulce</td>
+                    <td>3 g</td>
+                </tr>
+
+                <tr>
+                    <td>Comino</td>
+                    <td>1 g</td>
+                </tr>
+
+                <tr>
+                    <td>Agua</td>
+                    <td>45 ml</td>
+                </tr>
+
+                <tr>
+                    <td>Masa de empanadas</td>
+                    <td>12 unidades</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="pasos">
+
+            <h3>Paso a paso</h3>
+
+            <ol>
+                <li>
+                    Picar finamente la cebolla y el pimiento. Pelar y cortar las papas
+                    en cubos pequeños. Hervir los huevos y picarlos.
+                </li>
+
+                <li>
+                    Calentar el aceite y cocinar la cebolla y el pimiento durante
+                    5 a 7 minutos.
+                </li>
+
+                <li>
+                    Agregar la carne picada y cocinar durante 8 a 10 minutos.
+                </li>
+
+                <li>
+                    Incorporar sal, pimienta, pimentón y comino.
+                </li>
+
+                <li>
+                    Añadir las papas y cocinar hasta que estén tiernas.
+                </li>
+
+                <li>
+                    Dejar enfriar el relleno y agregar huevo duro y aceitunas.
+                </li>
+
+                <li>
+                    Rellenar las tapas, cerrar y realizar el repulgue.
+                </li>
+
+                <li>
+                    Hornear a 180°C durante 20 a 25 minutos.
+                </li>
+
+                <li>
+                    Dejar reposar 5 minutos y servir.
+                </li>
+
+            </ol>
+
+        </div>
+
+    </section>
+
+</details>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <details class="receta">
+
+    <summary>
+        <img src="/imagenes/papa2.png" alt="Pastel de Papa">
+        <h2>PASTEL DE PAPA</h2>
+    </summary>
+
+    <section class="contenido_receta">
+
+        <div class="historia">
+
+            <h2>Historia del pastel de papa</h2>
+
+            <p>
+                El Pastel de papa es un plato de origen popular muy arraigado en la cocina
+                rioplatense, especialmente en Argentina y Uruguay, y su historia está vinculada
+                a la adaptación local de preparaciones europeas de “pasteles” o “coberturas”
+                hechas con puré de papas, que llegaron a América con la inmigración masiva del
+                siglo XIX. Su antecedente más claro se encuentra en el shepherd’s pie británico,
+                un pastel de carne cubierto con puré de papa, que fue adoptado y transformado por
+                las familias inmigrantes europeas —principalmente italianas, españolas e inglesas—
+                al incorporar ingredientes disponibles en la región como carne vacuna, cebolla,
+                morrón, huevo duro y aceitunas.
+            </p>
+
+        </div>
+
+        <div class="ingredientes">
+
+            <h3>INGREDIENTES Y CANTIDADES</h3>
+            <h4>4 PORCIONES</h4>
+
+        <table>
+
+            <tr>
+                <td>Papa</td>
+                <td>1 Kg</td>
+            </tr>
+        
+            <tr>
+                <td>Leche</td>
+                <td>150 ml</td>
+            </tr>
+        
+            <tr>
+                <td>Manteca</td>
+                <td>50 g</td>
+            </tr>
+        
+            <tr>
+                <td>Sal</td>
+                <td>1 cucharada (5 g)</td>
+            </tr>
+        
+            <tr>
+                <td>Carne picada</td>
+                <td>500 g</td>
+            </tr>
+        
+            <tr>
+                <td>Cebolla</td>
+                <td>1 unidad (200 g)</td>
+            </tr>
+        
+            <tr>
+                <td>Morrón rojo</td>
+                <td>1/2 unidad (50 g)</td>
+            </tr>
+        
+            <tr>
+                <td>Pimienta</td>
+                <td>1/2 cucharada (1 g)</td>
+            </tr>
+        
+            <tr>
+                <td>Pimentón</td>
+                <td>1 cucharada (3 g)</td>
+            </tr>
+        
+            <tr>
+                <td>Huevos duros</td>
+                <td>2 unidades</td>
+            </tr>
+        </table>
+
+        </div>
+
+        <div class="pasos">
+
+            <h3>PASO A PASO</h3>
+
+            <ol>
+                <li>
+                    Hervir las papas en agua con sal durante 20–25 minutos hasta que estén blandas.
+                    Escurrir y pisar. Agregar la manteca (50 g), la leche (150 ml) y sal (5 g).
+                    Mezclar hasta lograr un puré suave.
+                </li>
+
+                <li>
+                    En una sartén, calentar el aceite (30 ml) y sofreír la cebolla y el morrón
+                    durante 5–7 minutos. Agregar la carne (500 g) y cocinar 8–10 minutos hasta dorar.
+                </li>
+
+                <li>
+                    Añadir sal (5 g), pimienta (1 g) y pimentón (3 g).
+                    Mezclar bien y cocinar 2 minutos más.
+                </li>
+
+                <li>
+                    En una fuente para horno, colocar una capa de carne.
+                    Agregar huevos duros picados y aceitunas.
+                    Cubrir con el puré de papa.
+                </li>
+
+                <li>
+                    Llevar al horno a 200 °C durante 20–25 minutos,
+                    hasta que la superficie esté dorada.
+                </li>
+
+                <li>
+                    Dejar reposar 5–10 minutos antes de servir.
+                </li>
+            </ol>
+
+        </div>
+
+    </section>
+
+</details>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+            <details class="receta">
+             <summary>
+                 <img src="/imagenes/mila.png" alt="Milanesa Napolitana">
+                    <h2>MILANESA NAPOLITANA</h2>
+             </summary>
+
+
+            <section class="contenido_receta">
+
+    <div class="historia">
+        <h3>Historia de la Milanesa Napolitana</h3>
+
+        <p>
+            La Milanesa a la napolitana es un plato emblemático de la gastronomía argentina
+            que tiene una historia curiosa, ya que no nació en Italia (como su nombre podría
+            sugerir), sino en Argentina, específicamente en Buenos Aires, a mediados del
+            siglo XX. Su origen se atribuye a una adaptación local de la milanesa clásica
+            —inspirada en la cotoletta italiana traída por inmigrantes— a la que se le
+            incorporaron ingredientes como salsa de tomate, jamón y queso, probablemente en
+            la década de 1940 o 1950.
+
+            Existen distintas versiones sobre su creación, pero una de las más difundidas
+            sostiene que surgió en un restaurante cercano al estadio Luna Park, donde un
+            cocinero habría intentado cubrir una milanesa quemada con salsa y queso,
+            dando lugar a la preparación que luego se popularizó rápidamente. Con el tiempo,
+            se consolidó como un clásico de bodegones y hogares argentinos, convirtiéndose
+            en uno de los platos más representativos del país por su sabor abundante y su
+            fuerte identidad local.
+        </p>
+    </div>
+
+    <div class="ingredientes">
+
+        <h3>Ingredientes (4 porciones)</h3>
+
+        <table>
+            <tr>
+                <th>Ingrediente</th>
+                <th>Cantidad</th>
+            </tr>
+
+            <tr>
+                <td>Carne (corte cuadrada o nalga)</td>
+                <td>150-180 g cada una</td>
+            </tr>
+
+            <tr>
+                <td>Huevos</td>
+                <td>2 unidades</td>
+            </tr>
+
+            <tr>
+                <td>Ajo (opcional)</td>
+                <td>2 dientes</td>
+            </tr>
+
+            <tr>
+                <td>Sal</td>
+                <td>5 g</td>
+            </tr>
+
+            <tr>
+                <td>Pimienta</td>
+                <td>1 g</td>
+            </tr>
+
+            <tr>
+                <td>Pan rallado</td>
+                <td>200 g</td>
+            </tr>
+
+            <tr>
+                <td>Harina</td>
+                <td>100 g</td>
+            </tr>
+
+            <tr>
+                <td>Aceite para freír o pincelar</td>
+                <td>150-200 ml</td>
+            </tr>
+
+            <tr>
+                <td>Salsa de tomate</td>
+                <td>200-250 g</td>
+            </tr>
+
+            <tr>
+                <td>Jamón cocido</td>
+                <td>4 fetas (aprox. 100 g)</td>
+            </tr>
+
+            <tr>
+                <td>Queso mozzarella</td>
+                <td>200 g</td>
+            </tr>
+
+            <tr>
+                <td>Orégano</td>
+                <td>2 g</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="pasos">
+
+        <h3>Paso a paso</h3>
+
+        <ol>
+            <li>
+                Aplanar ligeramente los bifes si es necesario. Salpimentar con
+                sal y pimienta de manera uniforme.
+            </li>
+
+            <li>
+                Pasar cada bife por harina, luego por huevo batido y finalmente
+                por pan rallado, asegurándose de cubrir bien toda la superficie.
+            </li>
+
+            <li>
+                Freír en aceite caliente durante 3 a 4 minutos por lado hasta
+                dorar, o cocinar al horno a 200°C durante 15 a 20 minutos.
+            </li>
+
+            <li>
+                Colocar las milanesas en una fuente. Cubrir con salsa de tomate,
+                luego disponer el jamón y finalmente la mozzarella por encima.
+            </li>
+
+            <li>
+                Llevar al horno a 200°C durante 8 a 12 minutos, hasta que el
+                queso se derrita y gratine.
+            </li>
+
+            <li>
+                Espolvorear orégano y dejar reposar 2 minutos antes de servir.
+            </li>
+
+        </ol>
+
+    </div>
+
+</section>
+
+    </main>
+    
     <footer class="contacto" id="contacto">
 
         <h3>CONTACTOS</h3>
@@ -395,6 +858,5 @@
         <p class="copyright">© 2026 Margarita Cocina. Todos los derechos reservados.</p>
 
     </footer>
-
 </body>
 </html>
