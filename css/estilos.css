@@ -242,3 +242,28 @@ footer h3 {
     height: 35px;
     object-fit: contain;
 }
+.boton-inicio {
+    display: inline-block;
+    margin: 25px auto;
+    padding: 10px 20px;
+    color: rgb(212, 175, 55);
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(212, 175, 55);
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.boton-inicio:hover {
+    background-color: rgb(212, 175, 55);
+    color: rgb(18, 18, 18);
+    transform: scale(1.05);
+}
+::-webkit-scrollbar
+{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: rgb(212, 175, 55);
+}
