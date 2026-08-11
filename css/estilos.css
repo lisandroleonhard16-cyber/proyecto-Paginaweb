@@ -98,6 +98,8 @@ a{
 
 .menu-desplegable {
     position: relative;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
 }
 
 .menu-desplegable .menu-toggle {
@@ -145,7 +147,7 @@ a{
     border: 1px solid rgb(212, 175, 55);
     border-radius: 12px;
     padding: 10px 0;
-    margin-top: 10px;
+    margin-top: 0;
     list-style: none;
     box-shadow: 0px 6px 15px rgba(212, 175, 55, 0.4);
     z-index: 10;
