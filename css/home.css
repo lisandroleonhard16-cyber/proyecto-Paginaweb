@@ -13,7 +13,7 @@
     background-color: rgb(30, 30, 30);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0px 6px 15px rgb(212, 175, 55);
+    box-shadow: 0px 6px 15px rgb(152, 9, 9);
     border: 2px solid rgb(212,175,55);
 
 }
@@ -63,8 +63,8 @@ video {
     width: 70%;
     max-width: 900px;
     border-radius: 10px;
-    border: 2px solid rgb(212,175,55);
-    box-shadow: 0px 6px 50px rgb(212, 175, 55);
+    border: 2px solid rgb(247,175,55);
+    box-shadow: 0px 0px 30px rgb(250, 1, 88);
 }
 
 .destacada h2{
