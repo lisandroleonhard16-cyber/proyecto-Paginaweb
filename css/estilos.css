@@ -269,3 +269,36 @@ footer h3 {
 {
     background-color: rgb(212, 175, 55);
 }
+#btnSubir {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+  }
+  
+  #btnSubir:hover {
+    background-color: #555;
+  }
+  
+  /* Cuando llega al footer, se despega y queda dentro de él */
+  #btnSubir.en-footer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* El footer necesita position relative para que funcione lo de arriba */
+  #miFooter {
+    position: relative;
+  }

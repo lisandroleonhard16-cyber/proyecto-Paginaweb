@@ -28,3 +28,33 @@
     color: rgb(212, 175, 55);
     font-size: 35px;
 }
+.seccion-nosotros {
+    background-color: #1a1a1a;
+    padding: 60px 20px 10px 20px;
+    text-align: center;
+    border-top: 2px solid #d4af37;
+  }
+  
+  .contenedor-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .seccion-nosotros h2 {
+    color: #d4af37;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  
+  .seccion-nosotros p {
+    color: #f0e6d2;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  .seccion-nosotros p:last-child {
+    margin-bottom: 40px;
+  }
