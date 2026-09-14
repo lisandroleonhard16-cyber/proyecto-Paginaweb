@@ -275,30 +275,44 @@ footer h3 {
     bottom: 30px;
     right: 10px;
     z-index: 999;
-    width: 50px;
-    height: 50px;
-    border: none;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #d4af37;
     border-radius: 50%;
-    background-color: #333;
-    color: #fff;
+
+    background-color: #222;
+    color: #d4af37;
+
     font-size: 22px;
+    font-weight: bold;
+
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: background-color 0.3s;
-  }
-  
-  #btnSubir:hover {
-    background-color: #555;
-  }
-  
-  /* Cuando llega al footer, se despega y queda dentro de él */
-  #btnSubir.en-footer {
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#btnSubir:hover {
+    background-color: #d4af37;
+    color: #222;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
+}
+
+/* Cuando llega al footer */
+#btnSubir.en-footer {
     position: absolute;
     bottom: 20px;
-    right: 20px;
-  }
-  
-  /* El footer necesita position relative para que funcione lo de arriba */
-  #miFooter {
+    right: 10px;
+}
+
+/* Footer */
+#miFooter {
     position: relative;
-  }
+}
