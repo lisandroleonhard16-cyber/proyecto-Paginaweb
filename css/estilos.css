@@ -179,19 +179,20 @@ a{
 
 /* FOOTER */
 
+/* FOOTER */
+
 footer {
-    padding: 40px 20px;
+    padding: 0px 0px;
     text-align: center;
-    border-top: 20px solid rgb(212,175,55);
-    border-top-style: ridge;
-    border-top-style: double;
-    margin-top: 60px;
+    border-top: 8px double rgb(212,175,55);
+    margin-top: 25px;
+    margin-bottom: 0px;
 }
 
 footer h3 {
     color: rgb(212, 175, 55);
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 /* CONTENEDOR GENERAL DE LAS DOS TARJETAS */
@@ -200,8 +201,11 @@ footer h3 {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* TARJETAS */
@@ -209,9 +213,10 @@ footer h3 {
 .contenedorfooter {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    flex: 1 1 300px;
+    max-width: 340px;
     min-height: 18px;
-    padding: 20px;
+    padding: 10px 15px;
     background-color: #111;
     border: 2px solid goldenrod;
     border-radius: 12px;
@@ -225,8 +230,8 @@ footer h3 {
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 6px;
+    padding: 4px 5px;
     font-size: 20px;
     text-align: left;
     border: 1px solid rgb(212, 175, 55);
@@ -244,6 +249,7 @@ footer h3 {
     height: 35px;
     object-fit: contain;
 }
+
 .boton-inicio {
     display: inline-block;
     margin: 25px auto;
