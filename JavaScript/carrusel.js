@@ -2,25 +2,25 @@
 const recetasDestacadas = [
     {
         titulo: "ESPECIALIDAD DE LA CASA: PIZZA MARGARITA",
-        imagen: "imagenes/pizzamargarita.jpg",
+        imagen: "../imagenes/Recetas/Especialidad de la casa/pizzamargarita.jpg",
         alt: "Pizza Margarita",
         link: "/html/Recetas/especialidad_casa.html"
     },
     {
         titulo: "RECETA DEL DÍA: EMPANADAS SALTEÑAS",
-        imagen: "/imagenes/empanadas",
+        imagen: "../imagenes/Recetas/Especialidad de la casa/saltenas-beef-empanadas.jpg",
         alt: "Empanadas Salteñas",
-        link: "/html/Recetas/carnes.html"
+        link: "/html/Recetas/carnes.html"   
     },
     {
         titulo: "RECOMENDADO: PASTAS CASERAS",
-        imagen: "imagenes/pastas.jpg",
+        imagen: "../imagenes/Recetas/Pastas/Fettuccine-Alfredo.jpg",
         alt: "Pastas Caseras",
         link: "/html/Recetas/pastas.html"
     },
     {
         titulo: "DULCE TENTACIÓN: POSTRE DEL DÍA",
-        imagen: "imagenes/postre.jpg",
+        imagen: "../imagenes/Recetas/postres/flan con dulce de leche.jfif",
         alt: "Postre del día",
         link: "/html/Recetas/postres.html"
     }
@@ -53,8 +53,13 @@ function actualizarRecetaDestacada() {
 
         // Avanza al siguiente índice, y vuelve a 0 si llega al final
         indiceActual = (indiceActual + 1) % recetasDestacadas.length;
-    }, 400); // debe ser un poco menor al tiempo de transición del CSS (600ms)
+    }, 600); // debe ser un poco menor al tiempo de transición del CSS (600ms)
 }
 
-// Arranca el carrusel automático
+// Ejecuta el cambio inmediatamente al cargar la página (sin esperar los 5 segundos)
+document.addEventListener("DOMContentLoaded", () => {
+    actualizarRecetaDestacada();
+});
+
+// Y después arranca el carrusel automático para los siguientes cambios
 setInterval(actualizarRecetaDestacada, TIEMPO_ROTACION);
