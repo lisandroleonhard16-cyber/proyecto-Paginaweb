@@ -3,7 +3,11 @@ const recetasDestacadas = [
     {
         titulo: "ESPECIALIDAD DE LA CASA: PIZZA MARGARITA",
 <<<<<<< HEAD
+<<<<<<< HEAD
         imagen: "imagenes/FotoMedio/pizzamargarita.jpg",  //funciona asi con esta ruta
+=======
+        imagen: "../imagenes/Recetas/Especialidad de la casa/pizzamargarita.jpg",
+>>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
 =======
         imagen: "../imagenes/Recetas/Especialidad de la casa/pizzamargarita.jpg",
 >>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
@@ -13,7 +17,11 @@ const recetasDestacadas = [
     {
         titulo: "RECETA DEL DÍA: EMPANADAS SALTEÑAS",
 <<<<<<< HEAD
+<<<<<<< HEAD
         imagen: "imagenes/FotoMedio/saltenas-beef-empanadas.jpg",
+=======
+        imagen: "../imagenes/Recetas/Especialidad de la casa/saltenas-beef-empanadas.jpg",
+>>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
 =======
         imagen: "../imagenes/Recetas/Especialidad de la casa/saltenas-beef-empanadas.jpg",
 >>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
@@ -23,7 +31,11 @@ const recetasDestacadas = [
     {
         titulo: "RECOMENDADO: PASTAS CASERAS",
 <<<<<<< HEAD
+<<<<<<< HEAD
         imagen: "imagenes/FotoMedio/caseros.jfif",
+=======
+        imagen: "../imagenes/Recetas/Pastas/Fettuccine-Alfredo.jpg",
+>>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
 =======
         imagen: "../imagenes/Recetas/Pastas/Fettuccine-Alfredo.jpg",
 >>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
@@ -33,7 +45,11 @@ const recetasDestacadas = [
     {
         titulo: "DULCE TENTACIÓN: POSTRE DEL DÍA",
 <<<<<<< HEAD
+<<<<<<< HEAD
         imagen: "imagenes/FotoMedio/postre.jpg",
+=======
+        imagen: "../imagenes/Recetas/postres/flan con dulce de leche.jfif",
+>>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
 =======
         imagen: "../imagenes/Recetas/postres/flan con dulce de leche.jfif",
 >>>>>>> a72f627ecffef48838303e6d73b0e115eedad490
