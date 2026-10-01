@@ -17,7 +17,7 @@ const recetasDestacadas = [
     },
     {
         titulo: "DULCE TENTACIÓN: POSTRE DEL DÍA",
-        imagen: "imagenes/postre.jpg",
+        imagen: "imagenes/FotoMedio/flan con dulce de leche.jfif",
         alt: "Postre del día",
     }
     // Agregá más recetas acá con la misma estructura
