@@ -1,0 +1,11 @@
+# robots.txt para Margarita Cocina
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://margaritacocina.com/sitemap.xml
+
+# Disallow archivos privados si los hubiera
+Disallow: /private/
+Disallow: /temp/

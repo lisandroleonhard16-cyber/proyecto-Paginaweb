@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Página principal -->
+    <url>
+        <loc>https://margaritacocina.com/index.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Página Nosotros -->
+    <url>
+        <loc>https://margaritacocina.com/nosotros.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Página Contacto -->
+    <url>
+        <loc>https://margaritacocina.com/contacto.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Recetas - Especialidad de la casa -->
+    <url>
+        <loc>https://margaritacocina.com/html/Recetas/especialidad_casa.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Recetas - Pastas -->
+    <url>
+        <loc>https://margaritacocina.com/html/Recetas/pastas.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Recetas - Carnes -->
+    <url>
+        <loc>https://margaritacocina.com/html/Recetas/carnes.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Recetas - Ensaladas -->
+    <url>
+        <loc>https://margaritacocina.com/html/Recetas/ensaladas.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Recetas - Postres -->
+    <url>
+        <loc>https://margaritacocina.com/html/Recetas/postres.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Recetas - Tragos -->
+    <url>
+        <loc>https://margaritacocina.com/html/Recetas/tragos.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Dietas Especiales - Vegetarianas -->
+    <url>
+        <loc>https://margaritacocina.com/html/Dietas%20espaciales/vegetarianas.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Dietas Especiales - Veganas -->
+    <url>
+        <loc>https://margaritacocina.com/html/Dietas%20espaciales/veganas.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Dietas Especiales - Sin TACC -->
+    <url>
+        <loc>https://margaritacocina.com/html/Dietas%20espaciales/sintacc.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Dietas Especiales - Sin Lactosa -->
+    <url>
+        <loc>https://margaritacocina.com/html/Dietas%20espaciales/sinlactosa.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Dietas Especiales - Sin Azúcar -->
+    <url>
+        <loc>https://margaritacocina.com/html/Dietas%20espaciales/sinazucar.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Dietas Especiales - Altas en Proteínas -->
+    <url>
+        <loc>https://margaritacocina.com/html/Dietas%20espaciales/altasproteinas.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>

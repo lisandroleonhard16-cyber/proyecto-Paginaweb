@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Recetas Rapidas</title>
+        <title>Sobre Nosotros - Margarita Cocina | Recetas Fáciles y Deliciosas</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Conoce a Margarita Cocina. Ofrecemos recetas variadas, desde clásicos hasta opciones para dietas especiales: vegetarianas, veganas, sin gluten, bajas en calorías y más. Cocinar es un placer.">
+        <meta name="keywords" content="nosotros, margarita cocina, recetas fáciles, recetas variadas, dietas especiales, cocina casera, recetas probadas">
+        <meta name="author" content="Margarita Cocina">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://margaritacocina.com/nosotros.html">
+        
+        <!-- Open Graph para Facebook y redes sociales -->
+        <meta property="og:title" content="Sobre Nosotros - Margarita Cocina">
+        <meta property="og:description" content="Conoce a Margarita Cocina. Ofrecemos recetas variadas, desde clásicos hasta opciones para dietas especiales. Cocinar es un placer.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://margaritacocina.com/nosotros.html">
+        <meta property="og:locale" content="es_ES">
+        
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Sobre Nosotros - Margarita Cocina">
+        <meta name="twitter:description" content="Conoce a Margarita Cocina. Ofrecemos recetas variadas, desde clásicos hasta opciones para dietas especiales.">
+        
         <link rel="stylesheet" href="/css/estilos.css">
         <link rel="stylesheet" href="/css/receta_tradicional.css">
         <link rel="stylesheet" href="/css/contenido_receta.css">
@@ -11,7 +30,13 @@
         <header class="encabezado">
             <a href="index.html"><h1>MARGARITA COCINA</h1></a>
 
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="nav">
             <ul>
                 <li class="menu-desplegable">
                     <span class="menu-toggle">Recetas <span class="flecha">▾</span></span>
@@ -27,7 +52,7 @@
                     </ul>
                 </li>
                 <li class="menu-desplegable">
-                    
+
                     <span class="menu-toggle">Dietas Especiales <span class="flecha">▾</span></span>
 
                     <ul class="submenu">
@@ -40,8 +65,8 @@
                     </ul>
                 </li>
 
-                <li><a href="/html/nosotros.html">Nosotros</a></li>
-                <li><a href="/html/contacto.html#contacto">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
 
             </ul>
         </nav>
@@ -100,5 +125,6 @@
         <p class="copyright">© 2026 Margarita Cocina. Todos los derechos reservados.</p>
 
     </footer>
+    <script src="JavaScript/menu.js"></script>
 </body>
 </html>
