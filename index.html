@@ -31,6 +31,14 @@
 
 <body class="foto_fondo">
 
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
+
     <header id="inicio" class="encabezado" >
         <a href="index.html"><h1>MARGARITA COCINA</h1></a>
 
@@ -76,15 +84,15 @@
 
        <section class="destacada">
             <h2 id="tituloDestacado">ESPECIALIDAD DE LA CASA: PIZZA MARGARITA</h2>
-            <img src="imagenes/pizzamargarita.jpg" alt="Pizza Margarita" id="imgDestacada">
+            <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" id="imgDestacada" loading="lazy">
         </section>
 
         <!-- Sección de Recetas Recientes -->
-        <section class="recetas-recientes">
+        <section class="recetas-recientes scroll-reveal">
             <h2>🍽️ Recetas Recientes</h2>
             <div class="grid-recetas">
-                <div class="tarjeta-receta">
-                    <img src="imagenes/pizzamargarita.jpg" alt="Pizza Margarita">
+                <div class="tarjeta-receta scroll-reveal">
+                    <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy">
                     <div class="tarjeta-content">
                         <h3>Pizza Margarita</h3>
                         <div class="tarjeta-meta">
@@ -97,8 +105,8 @@
                     </div>
                 </div>
 
-                <div class="tarjeta-receta">
-                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras">
+                <div class="tarjeta-receta scroll-reveal">
+                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras" loading="lazy">
                     <div class="tarjeta-content">
                         <h3>Pastas Caseras</h3>
                         <div class="tarjeta-meta">
@@ -111,8 +119,8 @@
                     </div>
                 </div>
 
-                <div class="tarjeta-receta">
-                    <img src="imagenes/FotoMedio/flan con dulce de leche.jfif" alt="Flan con Dulce de Leche">
+                <div class="tarjeta-receta scroll-reveal">
+                    <img src="imagenes/FotoMedio/flan con dulce de leche.jfif" alt="Flan con Dulce de Leche" loading="lazy">
                     <div class="tarjeta-content">
                         <h3>Flan con Dulce de Leche</h3>
                         <div class="tarjeta-meta">
@@ -121,12 +129,12 @@
                         </div>
                         <span class="badge badge-sinlactosa">Sin Lactosa</span>
                         <p>El postre argentino por excelencia, cremoso y dulce.</p>
-                        <a href="html/Recetas/postres.html" class="tarjeta-link">Ver Receta →</a>
+                        <a href="/html/Recetas/postres.html" class="tarjeta-link">Ver Receta →</a>
                     </div>
                 </div>
 
-                <div class="tarjeta-receta">
-                    <img src="imagenes/FotoMedio/saltenas-beef-empanadas.jpg" alt="Empanadas Salteñas">
+                <div class="tarjeta-receta scroll-reveal">
+                    <img src="imagenes/FotoMedio/saltenas-beef-empanadas.jpg" alt="Empanadas Salteñas" loading="lazy">
                     <div class="tarjeta-content">
                         <h3>Empanadas Salteñas</h3>
                         <div class="tarjeta-meta">
@@ -142,11 +150,11 @@
         </section>
 
         <!-- Sección de Destacados de la Semana -->
-        <section class="destacados-semana">
+        <section class="destacados-semana scroll-reveal">
             <h2>⭐ Destacados de la Semana</h2>
             <div class="destacados-grid">
-                <div class="tarjeta-destacada">
-                    <img src="imagenes/pizzamargarita.jpg" alt="Pizza Margarita">
+                <div class="tarjeta-destacada scroll-reveal">
+                    <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy">
                     <div class="tarjeta-content">
                         <h3>Pizza Margarita</h3>
                         <div class="estrellas">★★★★★</div>
@@ -159,8 +167,8 @@
                     </div>
                 </div>
 
-                <div class="tarjeta-destacada">
-                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras">
+                <div class="tarjeta-destacada scroll-reveal">
+                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras" loading="lazy">
                     <div class="tarjeta-content">
                         <h3>Pastas Caseras</h3>
                         <div class="estrellas">★★★★☆</div>
@@ -176,35 +184,35 @@
         </section>
 
         <!-- Sección de Categorías -->
-        <section class="categorias-section">
+        <section class="categorias-section scroll-reveal">
             <h2>📂 Explora por Categoría</h2>
             <div class="categorias-grid">
-                <div class="categoria-card">
+                <div class="categoria-card scroll-reveal">
                     <div class="categoria-icon">🍕</div>
                     <h3>Pastas</h3>
                     <p>15 recetas</p>
                 </div>
-                <div class="categoria-card">
+                <div class="categoria-card scroll-reveal">
                     <div class="categoria-icon">🥩</div>
                     <h3>Carnes</h3>
                     <p>12 recetas</p>
                 </div>
-                <div class="categoria-card">
+                <div class="categoria-card scroll-reveal">
                     <div class="categoria-icon">🥗</div>
                     <h3>Ensaladas</h3>
                     <p>8 recetas</p>
                 </div>
-                <div class="categoria-card">
+                <div class="categoria-card scroll-reveal">
                     <div class="categoria-icon">🍰</div>
                     <h3>Postres</h3>
                     <p>20 recetas</p>
                 </div>
-                <div class="categoria-card">
+                <div class="categoria-card scroll-reveal">
                     <div class="categoria-icon">🥬</div>
                     <h3>Vegetarianas</h3>
                     <p>18 recetas</p>
                 </div>
-                <div class="categoria-card">
+                <div class="categoria-card scroll-reveal">
                     <div class="categoria-icon">🌱</div>
                     <h3>Veganas</h3>
                     <p>14 recetas</p>
@@ -286,6 +294,7 @@
     <script src="JavaScript/boton.js"></script>
     <script src="JavaScript/carrusel.js"></script>
     <script src="JavaScript/menu.js"></script>
+    <script src="JavaScript/animations.js"></script>
 
 </body>
 </html>

@@ -100,4 +100,538 @@ video {
     height: 70px;
 }
 
+/* GRID DE RECETAS RECIENTES */
+.recetas-recientes {
+    margin: 50px 20px;
+    padding: 30px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 20px;
+    border: 2px solid rgb(212, 175, 55);
+    box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.2);
+}
 
+.recetas-recientes h2 {
+    text-align: center;
+    color: rgb(212, 175, 55);
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: "Georgia", serif;
+}
+
+.grid-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-receta {
+    background-color: rgb(20, 20, 20);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid rgb(212, 175, 55);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-receta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+    border-color: rgb(255, 215, 0);
+}
+
+.tarjeta-receta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-receta:hover img {
+    transform: scale(1.1);
+}
+
+.tarjeta-content {
+    padding: 20px;
+}
+
+.tarjeta-content h3 {
+    color: rgb(212, 175, 55);
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    font-family: "Georgia", serif;
+}
+
+.tarjeta-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-vegetariana {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.badge-vegana {
+    background-color: #8BC34A;
+    color: white;
+}
+
+.badge-sintacc {
+    background-color: #FF9800;
+    color: white;
+}
+
+.badge-sinlactosa {
+    background-color: #2196F3;
+    color: white;
+}
+
+.badge-destacado {
+    background-color: rgb(212, 175, 55);
+    color: black;
+}
+
+.tarjeta-content p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.tarjeta-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgb(212, 175, 55);
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-link:hover {
+    background-color: rgb(255, 215, 0);
+    transform: scale(1.05);
+}
+
+/* SECCIÓN DESTACADOS DE LA SEMANA */
+.destacados-semana {
+    margin: 50px 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(40, 40, 40, 0.95));
+    border-radius: 20px;
+    border: 2px solid rgb(212, 175, 55);
+    box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.destacados-semana h2 {
+    text-align: center;
+    color: rgb(212, 175, 55);
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: "Georgia", serif;
+}
+
+.destacados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-destacada {
+    background-color: rgb(20, 20, 20);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid rgb(212, 175, 55);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.tarjeta-destacada:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+}
+
+.tarjeta-destacada img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-destacada:hover img {
+    transform: scale(1.1);
+}
+
+.tarjeta-destacada .tarjeta-content {
+    padding: 25px;
+}
+
+.tarjeta-destacada h3 {
+    color: rgb(212, 175, 55);
+    font-size: 26px;
+    margin: 0 0 15px 0;
+    font-family: "Georgia", serif;
+}
+
+.estrellas {
+    color: rgb(212, 175, 55);
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* SECCIÓN CATEGORÍAS */
+.categorias-section {
+    margin: 50px 20px;
+    padding: 30px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 20px;
+    border: 2px solid rgb(212, 175, 55);
+}
+
+.categorias-section h2 {
+    text-align: center;
+    color: rgb(212, 175, 55);
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: "Georgia", serif;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categoria-card {
+    background: linear-gradient(135deg, rgb(30, 30, 30), rgb(40, 40, 40));
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid rgb(212, 175, 55);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.categoria-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, rgb(40, 40, 40), rgb(50, 50, 50));
+}
+
+.categoria-card h3 {
+    color: rgb(212, 175, 55);
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+    font-family: "Georgia", serif;
+}
+
+.categoria-card p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.categoria-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* ANIMACIONES SCROLL REVEAL */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.revealed-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.scroll-reveal.revealed-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.scroll-reveal.revealed-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.scroll-reveal.revealed-delay-4 {
+    transition-delay: 0.4s;
+}
+
+/* ANIMACIÓN DE ENTRADA PARA LA PÁGINA */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ANIMACIÓN PARA EL CARRUSEL */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+/* EFECTO PULSO PARA ELEMENTOS DESTACADOS */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+/* LOADING SPINNER */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(212, 175, 55, 0.3);
+    border-top-color: rgb(212, 175, 55);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* EFECTO DE BRILLO EN IMÁGENES */
+.image-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* EFECTO DE PARTÍCULAS DE FONDO */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* EFECTO DE TYPING PARA TÍTULOS */
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid rgb(212, 175, 55);
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(212, 175, 55);
+    }
+}
+
+/* ANIMACIÓN DE BOUNCE PARA BOTONES */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.bounce-hover:hover {
+    animation: bounce 0.5s;
+}
+
+/* GRADIENTE ANIMADO PARA FONDOS */
+.animated-gradient {
+    background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1a1a1a, #333);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* INDICADORES DEL CARRUSEL */
+.carrusel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.carrusel-indicadores .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.carrusel-indicadores .dot:hover {
+    background-color: rgba(212, 175, 55, 0.6);
+    transform: scale(1.1);
+}
+
+.carrusel-indicadores .dot.active {
+    background-color: rgb(212, 175, 55);
+    transform: scale(1.3);
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}

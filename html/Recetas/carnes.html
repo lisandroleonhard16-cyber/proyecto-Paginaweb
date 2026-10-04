@@ -4,14 +4,28 @@
     <title>Carnes - MARGARITA COCINA</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="../../css/home.css">
         <link rel="stylesheet" href="../../css/receta_tradicional.css">
         <link rel="stylesheet" href="../../css/contenido_receta.css">
 </head>
 <body>
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Partículas de fondo -->
+<div class="particles" id="particles"></div>
    <header id="inicio" class="encabezado">
     <a href="../../index.html"><h1>MARGARITA COCINA</h1></a>
 
-    <nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="nav">
         <ul>
             <li class="menu-desplegable">
                 <span class="menu-toggle">Recetas <span class="flecha">▾</span></span>
@@ -40,7 +54,7 @@
                 </ul>
             </li>
             <li><a href="../../nosotros.html">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="../../contacto.html">Contacto</a></li>
         </ul>
     </nav>
 </header>
@@ -1897,7 +1911,7 @@
             </details>
     </main>
 
-    <footer class="contacto" id="contacto">
+    <footer class="contacto" id="miFooter">
 
         <h3>CONTACTOS</h3>
 
@@ -1936,6 +1950,8 @@
     </footer>
 
     <script src="../../JavaScript/boton.js"></script>
+    <script src="../../JavaScript/menu.js"></script>
+    <script src="../../JavaScript/animations.js"></script>
 
 
 </body>

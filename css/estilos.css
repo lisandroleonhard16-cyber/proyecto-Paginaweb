@@ -150,7 +150,7 @@ a{
     margin-top: 0;
     list-style: none;
     box-shadow: 0px 6px 15px rgba(212, 175, 55, 0.4);
-    z-index: 10;
+    z-index: 1000;
     justify-content: flex-start;
 }
 
@@ -321,4 +321,314 @@ footer h3 {
 /* Footer */
 #miFooter {
     position: relative;
+}
+
+/* MENÚ HAMBURGUESA PARA MÓVIL */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    gap: 5px;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(212, 175, 55);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .encabezado nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgb(20, 20, 20);
+        border-radius: 0;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding: 80px 20px 20px;
+        overflow-y: auto;
+    }
+
+    .encabezado nav.active {
+        right: 0;
+    }
+
+    .encabezado ul {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .encabezado li {
+        width: 100%;
+    }
+
+    .encabezado li a,
+    .menu-desplegable .menu-toggle {
+        font-size: 18px;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .encabezado .submenu {
+        position: static;
+        width: 100%;
+        min-width: auto;
+        margin-top: 10px;
+        padding-left: 20px;
+        box-shadow: none;
+        display: none;
+    }
+
+    .encabezado .menu-desplegable.active .submenu {
+        display: flex;
+    }
+
+    .encabezado h1 {
+        font-size: 28px;
+        max-width: 80%;
+    }
+
+    .informacion {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .fuentereceta {
+        width: 100%;
+    }
+
+    .grid-recetas {
+        grid-template-columns: 1fr;
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenedor-contactos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedorfooter {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado h1 {
+        font-size: 22px;
+    }
+
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destacada img {
+        width: 90%;
+    }
+
+    .destacada h2 {
+        font-size: 24px;
+    }
+}
+
+/* ANIMACIONES SCROLL REVEAL - Compartido */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* LOADING SPINNER */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(212, 175, 55, 0.3);
+    border-top-color: rgb(212, 175, 55);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* EFECTO DE PARTÍCULAS DE FONDO */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ESTILOS PARA PÁGINA DE CONTACTO */
+.contacto-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(30, 30, 30, 0.95);
+    border-radius: 20px;
+    border: 2px solid rgb(212, 175, 55);
+    box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+.contacto-section h2 {
+    text-align: center;
+    color: rgb(212, 175, 55);
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: "Georgia", serif;
+}
+
+.contacto-section p {
+    text-align: center;
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contacto-section .contenedorfooter h3 {
+    color: rgb(212, 175, 55);
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ESTILOS PARA PÁGINA NOSOTROS */
+.seccion-nosotros {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(30, 30, 30, 0.95);
+    border-radius: 20px;
+    border: 2px solid rgb(212, 175, 55);
+    box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+.contenedor-nosotros h2 {
+    text-align: center;
+    color: rgb(212, 175, 55);
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: "Georgia", serif;
+}
+
+.contenedor-nosotros p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
 }
