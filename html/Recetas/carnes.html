@@ -62,7 +62,7 @@
     <main>
 <!--==============MILANESA NAPOLITANA========================================================= -->
 
-            <details class="receta">
+            <details class="receta" id="milanesa">
                 <summary>
                     <img src="../../imagenes/Recetas/Carnes/mila.png" alt="Milanesa napolitana">
                     <h2>MILANESA NAPOLITANA</h2>
@@ -1952,6 +1952,22 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
+    <script>
+        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetReceta = document.getElementById(hash);
+                if (targetReceta && targetReceta.tagName === 'DETAILS') {
+                    targetReceta.open = true;
+                    // Scroll suave hacia la receta
+                    setTimeout(() => {
+                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        });
+    </script>
 
 
 </body>

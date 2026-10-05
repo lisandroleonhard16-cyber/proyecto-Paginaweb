@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Margarita Cocina - Recetas Deliciosas y Fáciles para Cocinar en Casa</title>
+    <title>Margarita Cocina - Recetas Deliciosas y Fáciles</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre recetas deliciosas y fáciles en Margarita Cocina. Pizza Margarita, pastas, carnes, ensaladas, postres y recetas para dietas especiales: vegetarianas, veganas, sin TACC, sin lactosa y más.">
-    <meta name="keywords" content="recetas, cocina, pizza margarita, pastas, carnes, ensaladas, postres, recetas vegetarianas, recetas veganas, sin TACC, sin lactosa, cocinar en casa, recetas fáciles">
+    <meta name="description" content="Descubre recetas deliciosas y fáciles en Margarita Cocina. Pizza Margarita, pastas, carnes, ensaladas, postres y recetas para dietas especiales.">
+    <meta name="keywords" content="recetas, cocina, pizza margarita, pastas, carnes, ensaladas, postres, recetas vegetarianas, recetas veganas, sin TACC, sin lactosa">
     <meta name="author" content="Margarita Cocina">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://margaritacocina.com/index.html">
-    
-    <!-- Open Graph para Facebook y redes sociales -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Margarita Cocina - Recetas Deliciosas y Fáciles">
-    <meta property="og:description" content="Descubre recetas deliciosas y fáciles en Margarita Cocina. Pizza Margarita, pastas, carnes, ensaladas, postres y recetas para dietas especiales.">
+    <meta property="og:description" content="Descubre recetas deliciosas y fáciles en Margarita Cocina.">
     <meta property="og:image" content="https://margaritacocina.com/imagenes/pizzamargarita.jpg">
     <meta property="og:url" content="https://margaritacocina.com/index.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
-    
+
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Margarita Cocina - Recetas Deliciosas y Fáciles">
-    <meta name="twitter:description" content="Descubre recetas deliciosas y fáciles en Margarita Cocina. Pizza Margarita, pastas, carnes, ensaladas, postres y recetas para dietas especiales.">
+    <meta name="twitter:description" content="Descubre recetas deliciosas y fáciles en Margarita Cocina.">
     <meta name="twitter:image" content="https://margaritacocina.com/imagenes/pizzamargarita.jpg">
-    
-    <link rel="stylesheet" href="css/estilos.css">  
+
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/home.css">
-    
 </head>
 
 <body class="foto_fondo">
-
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="spinner"></div>
@@ -39,7 +37,7 @@
     <!-- Partículas de fondo -->
     <div class="particles" id="particles"></div>
 
-    <header id="inicio" class="encabezado" >
+    <header id="inicio" class="encabezado">
         <a href="index.html"><h1>MARGARITA COCINA</h1></a>
 
         <button class="hamburger" id="hamburger" aria-label="Menú">
@@ -53,14 +51,12 @@
                 <li class="menu-desplegable">
                     <span class="menu-toggle">Recetas <span class="flecha">▾</span></span>
                     <ul class="submenu">
-
                         <li><a href="html/Recetas/especialidad_casa.html">Especialidad de la casa</a></li>
                         <li><a href="html/Recetas/pastas.html">Pastas</a></li>
                         <li><a href="html/Recetas/carnes.html">Carnes</a></li>
                         <li><a href="html/Recetas/ensaladas.html">Ensaladas</a></li>
                         <li><a href="html/Recetas/postres.html">Postres</a></li>
                         <li><a href="html/Recetas/tragos.html">Tragos</a></li>
-
                     </ul>
                 </li>
                 <li class="menu-desplegable">
@@ -81,27 +77,29 @@
     </header>
 
     <main>
-
-       <section class="destacada">
+        <!-- Carrusel destacado -->
+        <section class="destacada">
             <h2 id="tituloDestacado">ESPECIALIDAD DE LA CASA: PIZZA MARGARITA</h2>
             <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" id="imgDestacada" loading="lazy">
+            <button class="carrusel-btn prev" id="btnAnterior" aria-label="Anterior">❮</button>
+            <button class="carrusel-btn next" id="btnSiguiente" aria-label="Siguiente">❯</button>
         </section>
 
-        <!-- Sección de Recetas Recientes -->
+        <!-- Recetas Recientes -->
         <section class="recetas-recientes scroll-reveal">
-            <h2>🍽️ Recetas Recientes</h2>
+            <h2>Recetas Recientes</h2>
             <div class="grid-recetas">
                 <div class="tarjeta-receta scroll-reveal">
                     <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy">
                     <div class="tarjeta-content">
                         <h3>Pizza Margarita</h3>
                         <div class="tarjeta-meta">
-                            <span class="meta-item">⏱️ 45 min</span>
-                            <span class="meta-item">👤 4 porciones</span>
+                            <span class="meta-item">45 min</span>
+                            <span class="meta-item">4 porciones</span>
                         </div>
                         <span class="badge badge-destacado">Destacado</span>
                         <p>La clásica pizza italiana con tomate, mozzarella y albahaca fresca.</p>
-                        <a href="html/Recetas/especialidad_casa.html" class="tarjeta-link">Ver Receta →</a>
+                        <a href="html/Recetas/especialidad_casa.html#pizza-margherita" class="tarjeta-link">Ver Receta →</a>
                     </div>
                 </div>
 
@@ -110,12 +108,12 @@
                     <div class="tarjeta-content">
                         <h3>Pastas Caseras</h3>
                         <div class="tarjeta-meta">
-                            <span class="meta-item">⏱️ 60 min</span>
-                            <span class="meta-item">👤 6 porciones</span>
+                            <span class="meta-item">60 min</span>
+                            <span class="meta-item">6 porciones</span>
                         </div>
                         <span class="badge badge-vegetariana">Vegetariana</span>
                         <p>Deliciosas pastas hechas en casa con salsa boloñesa tradicional.</p>
-                        <a href="html/Recetas/pastas.html" class="tarjeta-link">Ver Receta →</a>
+                        <a href="html/Recetas/pastas.html#tallarines-caseros" class="tarjeta-link">Ver Receta →</a>
                     </div>
                 </div>
 
@@ -124,12 +122,12 @@
                     <div class="tarjeta-content">
                         <h3>Flan con Dulce de Leche</h3>
                         <div class="tarjeta-meta">
-                            <span class="meta-item">⏱️ 50 min</span>
-                            <span class="meta-item">👤 8 porciones</span>
+                            <span class="meta-item">50 min</span>
+                            <span class="meta-item">8 porciones</span>
                         </div>
                         <span class="badge badge-sinlactosa">Sin Lactosa</span>
                         <p>El postre argentino por excelencia, cremoso y dulce.</p>
-                        <a href="/html/Recetas/postres.html" class="tarjeta-link">Ver Receta →</a>
+                        <a href="html/Recetas/postres.html#flan" class="tarjeta-link">Ver Receta →</a>
                     </div>
                 </div>
 
@@ -138,20 +136,20 @@
                     <div class="tarjeta-content">
                         <h3>Empanadas Salteñas</h3>
                         <div class="tarjeta-meta">
-                            <span class="meta-item">⏱️ 90 min</span>
-                            <span class="meta-item">👤 12 unidades</span>
+                            <span class="meta-item">90 min</span>
+                            <span class="meta-item">12 unidades</span>
                         </div>
                         <span class="badge badge-destacado">Popular</span>
                         <p>Empanadas tradicionales bolivianas con relleno jugoso de carne.</p>
-                        <a href="html/Recetas/carnes.html" class="tarjeta-link">Ver Receta →</a>
+                        <a href="html/Recetas/especialidad_casa.html#empanadas" class="tarjeta-link">Ver Receta →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Destacados de la Semana -->
+        <!-- Destacados de la Semana -->
         <section class="destacados-semana scroll-reveal">
-            <h2>⭐ Destacados de la Semana</h2>
+            <h2>Destacados de la Semana</h2>
             <div class="destacados-grid">
                 <div class="tarjeta-destacada scroll-reveal">
                     <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy">
@@ -159,11 +157,11 @@
                         <h3>Pizza Margarita</h3>
                         <div class="estrellas">★★★★★</div>
                         <div class="tarjeta-meta">
-                            <span class="meta-item">⏱️ 45 min</span>
-                            <span class="meta-item">👤 4 porciones</span>
+                            <span class="meta-item">45 min</span>
+                            <span class="meta-item">4 porciones</span>
                         </div>
                         <p>La especialidad de la casa. Una pizza perfecta con ingredientes frescos y auténticos.</p>
-                        <a href="html/Recetas/especialidad_casa.html" class="tarjeta-link">Ver Receta →</a>
+                        <a href="html/Recetas/especialidad_casa.html#pizza-margherita" class="tarjeta-link">Ver Receta →</a>
                     </div>
                 </div>
 
@@ -173,19 +171,19 @@
                         <h3>Pastas Caseras</h3>
                         <div class="estrellas">★★★★☆</div>
                         <div class="tarjeta-meta">
-                            <span class="meta-item">⏱️ 60 min</span>
-                            <span class="meta-item">👤 6 porciones</span>
+                            <span class="meta-item">60 min</span>
+                            <span class="meta-item">6 porciones</span>
                         </div>
                         <p>Pastas frescas hechas a mano con salsa boloñesa casera y queso parmesano.</p>
-                        <a href="html/Recetas/pastas.html" class="tarjeta-link">Ver Receta →</a>
+                        <a href="html/Recetas/pastas.html#tallarines-caseros" class="tarjeta-link">Ver Receta →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Categorías -->
+        <!-- Categorías -->
         <section class="categorias-section scroll-reveal">
-            <h2>📂 Explora por Categoría</h2>
+            <h2>Explora por Categoría</h2>
             <div class="categorias-grid">
                 <div class="categoria-card scroll-reveal">
                     <div class="categoria-icon">🍕</div>
@@ -220,81 +218,57 @@
             </div>
         </section>
 
-
+        <!-- Información -->
         <div class="informacion">
-
             <section class="fuentereceta">
                 <h2>Nuestras fuentes de receta</h2>
-
                 <div class="contenedor">
                     <img src="imagenes/libro de receta.png" alt="Libro de recetas">
-
-                    <p>
-                        Las recetas de esta página nacen de experiencias, conversaciones e ideas
-                        creativas para compartir sabores simples y deliciosos.
-                    </p>
+                    <p>Las recetas de esta página nacen de experiencias, conversaciones e ideas creativas para compartir sabores simples y deliciosos.</p>
                 </div>
             </section>
 
             <section class="fuentereceta">
                 <h2>En qué nos basamos para cocinar</h2>
-
                 <div class="contenedor">
                     <img src="imagenes/chef.png" alt="Chef">
-
-                    <p>
-                        Creemos que cocinar bien puede ser simple, saludable y delicioso.
-                        Nuestras recetas combinan ingredientes accesibles, técnicas sencillas
-                        y el placer de compartir cada comida.
-                    </p>
+                    <p>Creemos que cocinar bien puede ser simple, saludable y delicioso. Nuestras recetas combinan ingredientes accesibles, técnicas sencillas y el placer de compartir cada comida.</p>
                 </div>
             </section>
-
         </div>
-
     </main>
 
     <footer class="contacto" id="miFooter">
-
         <h3>CONTACTOS</h3>
-
         <div class="contenedor-contactos">
-
             <div class="contenedorfooter">
                 <a href="https://www.instagram.com/licha.leonhard/">
                     <img src="imagenes/instagramlogo.png" class="iconoIG" alt="Instagram">
                     @licha.leonhard
                 </a>
-
                 <a href="https://www.instagram.com/yowaly13/">
                     <img src="imagenes/instagramlogo.png" class="iconoIG" alt="Instagram">
                     @yowaly13
                 </a>
             </div>
-
             <div class="contenedorfooter">
                 <a href="https://workspace.google.com/intl/es/gmail/">
-                    <img src="imagenes/gmail.png" class="iconoIG"alt="Gmail">
+                    <img src="imagenes/gmail.png" class="iconoIG" alt="Gmail">
                     lisandroleonhard16@gmail.com
                 </a>
-
                 <a href="https://workspace.google.com/intl/es/gmail/">
-                    <img src="imagenes/gmail.png" class="iconoIG"alt="Gmail">
+                    <img src="imagenes/gmail.png" class="iconoIG" alt="Gmail">
                     valenjg13@gmail.com
                 </a>
             </div>
-
         </div>
         <button class="botonsubir" id="btnSubir" title="Volver arriba">↑</button>
         <p class="copyright">© 2026 Margarita Cocina. Todos los derechos reservados.</p>
-
-
     </footer>
 
     <script src="JavaScript/boton.js"></script>
     <script src="JavaScript/carrusel.js"></script>
     <script src="JavaScript/menu.js"></script>
     <script src="JavaScript/animations.js"></script>
-
 </body>
 </html>

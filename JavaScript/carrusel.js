@@ -1,4 +1,4 @@
-// Lista de recetas destacadas: completá con tus propias recetas y fotos
+// ===== CONFIGURACIÓN =====
 const recetasDestacadas = [
     {
         titulo: "ESPECIALIDAD DE LA CASA: PIZZA MARGARITA",
@@ -20,14 +20,14 @@ const recetasDestacadas = [
         imagen: "imagenes/FotoMedio/flan con dulce de leche.jfif",
         alt: "Postre del día",
     }
-    // Agregá más recetas acá con la misma estructura
 ];
 
 let indiceActual = 0;
-const TIEMPO_ROTACION = 4000; // 4000 ms = 4 segundos
+const TIEMPO_ROTACION = 3000;
 let intervaloCarrusel = null;
 let isTransitioning = false;
 
+// ===== FUNCIONES PRINCIPALES =====
 function actualizarRecetaDestacada() {
     const titulo = document.getElementById("tituloDestacado");
     const imagen = document.getElementById("imgDestacada");
@@ -36,51 +36,45 @@ function actualizarRecetaDestacada() {
 
     isTransitioning = true;
 
-    // Animación de salida del título
+    // Animación de salida
     titulo.style.opacity = "0";
     titulo.style.transform = "translateX(-30px)";
     titulo.style.transition = "all 0.4s ease-out";
 
-    // Animación de salida de la imagen
     imagen.style.opacity = "0";
     imagen.style.transform = "scale(0.95)";
     imagen.style.transition = "all 0.5s ease-out";
 
     setTimeout(() => {
+        indiceActual = (indiceActual + 1) % recetasDestacadas.length;
         const receta = recetasDestacadas[indiceActual];
 
-        // Cambiar contenido
         titulo.textContent = receta.titulo;
         imagen.setAttribute("src", receta.imagen);
         imagen.setAttribute("alt", receta.alt);
 
-        // Precargar la siguiente imagen
+        // Precargar siguiente imagen
         const siguienteIndice = (indiceActual + 1) % recetasDestacadas.length;
-        const siguienteImagen = new Image();
-        siguienteImagen.src = recetasDestacadas[siguienteIndice].imagen;
+        new Image().src = recetasDestacadas[siguienteIndice].imagen;
 
-        // Animación de entrada del título
+        // Animación de entrada
         titulo.style.opacity = "1";
         titulo.style.transform = "translateX(0)";
-
-        // Animación de entrada de la imagen
         imagen.style.opacity = "1";
         imagen.style.transform = "scale(1)";
 
         setTimeout(() => {
             isTransitioning = false;
-            indiceActual = (indiceActual + 1) % recetasDestacadas.length;
+            actualizarIndicadorActivo();
         }, 500);
     }, 500);
 }
 
-// Iniciar carrusel automático
 function iniciarCarrusel() {
-    if (intervaloCarrusel) return;
+    if (intervaloCarrusel) clearInterval(intervaloCarrusel);
     intervaloCarrusel = setInterval(actualizarRecetaDestacada, TIEMPO_ROTACION);
 }
 
-// Detener carrusel automático
 function detenerCarrusel() {
     if (intervaloCarrusel) {
         clearInterval(intervaloCarrusel);
@@ -88,10 +82,10 @@ function detenerCarrusel() {
     }
 }
 
-// Navegación manual con botones (si los agregas en el futuro)
+// ===== NAVEGACIÓN =====
 function recetaAnterior() {
     detenerCarrusel();
-    indiceActual = (indiceActual - 1 + recetasDestacadas.length) % recetasDestacadas.length;
+    indiceActual = (indiceActual - 2 + recetasDestacadas.length) % recetasDestacadas.length;
     actualizarRecetaDestacada();
     setTimeout(iniciarCarrusel, 3000);
 }
@@ -102,36 +96,47 @@ function recetaSiguiente() {
     setTimeout(iniciarCarrusel, 3000);
 }
 
-// Pausar carrusel cuando el mouse está sobre la imagen destacada
-const destacadaSection = document.querySelector('.destacada');
-if (destacadaSection) {
-    destacadaSection.addEventListener('mouseenter', detenerCarrusel);
-    destacadaSection.addEventListener('mouseleave', iniciarCarrusel);
+// ===== INDICADORES =====
+function crearIndicadores() {
+    const destacadaSection = document.querySelector('.destacada');
+    if (!destacadaSection) return;
+
+    const contenedor = document.createElement('div');
+    contenedor.className = 'carrusel-indicadores';
+
+    recetasDestacadas.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        dot.addEventListener('click', () => {
+            detenerCarrusel();
+            indiceActual = (index - 1 + recetasDestacadas.length) % recetasDestacadas.length;
+            actualizarRecetaDestacada();
+            setTimeout(iniciarCarrusel, 3000);
+        });
+        contenedor.appendChild(dot);
+    });
+
+    destacadaSection.appendChild(contenedor);
 }
 
-// Pausar cuando la página no está visible (optimización)
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        detenerCarrusel();
-    } else {
-        iniciarCarrusel();
-    }
-});
+function actualizarIndicadorActivo() {
+    const dots = document.querySelectorAll('.dot');
+    const indiceMostrado = (indiceActual - 1 + recetasDestacadas.length) % recetasDestacadas.length;
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === indiceMostrado);
+    });
+}
 
-// Ejecuta el cambio inmediatamente al cargar la página
+// ===== INICIALIZACIÓN =====
 document.addEventListener("DOMContentLoaded", () => {
-    // Configurar estilos iniciales para animaciones
     const titulo = document.getElementById("tituloDestacado");
     const imagen = document.getElementById("imgDestacada");
 
-    if (titulo) {
-        titulo.style.transition = "all 0.4s ease-out";
-    }
-    if (imagen) {
-        imagen.style.transition = "all 0.5s ease-out";
-    }
+    // Configurar estilos iniciales
+    if (titulo) titulo.style.transition = "all 0.4s ease-out";
+    if (imagen) imagen.style.transition = "all 0.5s ease-out";
 
-    // Mostrar la primera receta sin animación de transición
+    // Mostrar primera receta
     const primeraReceta = recetasDestacadas[0];
     if (titulo && imagen) {
         titulo.textContent = primeraReceta.titulo;
@@ -140,56 +145,32 @@ document.addEventListener("DOMContentLoaded", () => {
         imagen.style.opacity = "1";
     }
 
-    // Incrementar índice para la siguiente
-    indiceActual = 1;
+    // Precargar imágenes
+    recetasDestacadas.forEach(receta => new Image().src = receta.imagen);
 
-    // Iniciar carrusel automático
-    setTimeout(iniciarCarrusel, TIEMPO_ROTACION);
+    // Crear indicadores
+    crearIndicadores();
+    actualizarIndicadorActivo();
+
+    // Event listeners botones
+    const btnAnterior = document.getElementById('btnAnterior');
+    const btnSiguiente = document.getElementById('btnSiguiente');
+    if (btnAnterior) btnAnterior.addEventListener('click', recetaAnterior);
+    if (btnSiguiente) btnSiguiente.addEventListener('click', recetaSiguiente);
+
+    // Pausar al hover
+    const destacadaSection = document.querySelector('.destacada');
+    if (destacadaSection) {
+        destacadaSection.addEventListener('mouseenter', detenerCarrusel);
+        destacadaSection.addEventListener('mouseleave', iniciarCarrusel);
+    }
+
+    // Pausar cuando la página no está visible
+    document.addEventListener('visibilitychange', () => {
+        document.hidden ? detenerCarrusel() : iniciarCarrusel();
+    });
+
+    // Iniciar carrusel
+    setTimeout(iniciarCarrusel, 1000);
 });
 
-// Agregar indicadores de progreso (dots) - opcional
-function crearIndicadores() {
-    const destacadaSection = document.querySelector('.destacada');
-    if (!destacadaSection) return;
-
-    const contenedorIndicadores = document.createElement('div');
-    contenedorIndicadores.className = 'carrusel-indicadores';
-
-    recetasDestacadas.forEach((_, index) => {
-        const dot = document.createElement('span');
-        dot.className = 'dot';
-
-        dot.addEventListener('click', () => {
-            detenerCarrusel();
-            indiceActual = index;
-            actualizarRecetaDestacada();
-            setTimeout(iniciarCarrusel, 3000);
-        });
-
-        contenedorIndicadores.appendChild(dot);
-    });
-
-    destacadaSection.appendChild(contenedorIndicadores);
-}
-
-// Crear indicadores al cargar
-document.addEventListener("DOMContentLoaded", crearIndicadores);
-
-// Actualizar indicador activo
-function actualizarIndicadorActivo() {
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-        if (index === indiceActual) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-    });
-}
-
-// Modificar actualizarRecetaDestacada para actualizar indicadores
-const originalActualizar = actualizarRecetaDestacada;
-actualizarRecetaDestacada = function() {
-    originalActualizar();
-    setTimeout(actualizarIndicadorActivo, 500);
-};

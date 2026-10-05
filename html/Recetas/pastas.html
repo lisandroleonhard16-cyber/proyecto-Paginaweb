@@ -62,7 +62,7 @@
     <main>
  <!-- =======================SPAGHETTI A LA BOLOÑESA========================================== -->
 
-            <details class="receta">
+            <details class="receta" id="spaghetti-bolonesa">
                 <summary>
                     <img src="../../imagenes/Recetas/Pastas/FIdeos boloñesa 3.jfif" alt="Spaghetti a la Boloñesa">
                     <h2>SPAGHETTI A LA BOLOÑESA</h2>
@@ -1359,7 +1359,7 @@
 
 <!-- =================================TALLARINES CASEROS=============================================== -->
 
-            <details class="receta">
+            <details class="receta" id="tallarines-caseros">
                 <summary>
                     <img src=" ../../imagenes/Recetas/Pastas/caseros.jfif" alt="Tallarines caseros">
                     <h2>TALLARINES CASEROS</h2>
@@ -1774,6 +1774,22 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
+    <script>
+        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetReceta = document.getElementById(hash);
+                if (targetReceta && targetReceta.tagName === 'DETAILS') {
+                    targetReceta.open = true;
+                    // Scroll suave hacia la receta
+                    setTimeout(() => {
+                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        });
+    </script>
 
 
 </body>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/receta_tradicional.css">
-    <link rel="stylesheet" href="../../css/contenido_receta.css">\
+    <link rel="stylesheet" href="../../css/contenido_receta.css">
 
 </head>
 
@@ -67,7 +67,7 @@
 
                 <!--========== FLAN CON DULCE DE LECHE ==========-->
 
-                <details class="receta">
+                <details class="receta" id="flan">
                     <summary>
                         <img src="/imagenes/Flan ia.png" alt="Flan con Dulce de Leche">
                         <h2>FLAN CON DULCE DE LECHE</h2>
@@ -1275,6 +1275,24 @@
     </footer>
 
     <script src="../../JavaScript/boton.js"></script>
+    <script src="../../JavaScript/menu.js"></script>
+    <script src="../../JavaScript/animations.js"></script>
+    <script>
+        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetReceta = document.getElementById(hash);
+                if (targetReceta && targetReceta.tagName === 'DETAILS') {
+                    targetReceta.open = true;
+                    // Scroll suave hacia la receta
+                    setTimeout(() => {
+                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        });
+    </script>
 
 
 </body>

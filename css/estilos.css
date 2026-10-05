@@ -1,4 +1,5 @@
-body{
+/* ===== ESTILOS GENERALES ===== */
+body {
     margin: 0;
     background-color: rgb(0, 0, 0);
     color: white;
@@ -7,30 +8,40 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
-h1,h2,h3{
+h1, h2, h3 {
     color: rgb(212, 175, 55);
     text-shadow: 2px 2px 8px black;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
-/* Encabezado */
 
-.encabezado {
-    font-weight: bolder;
-    border-bottom: 20px double rgb(212,175,55);
-
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    background-color: black;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: rgb(212, 175, 55);
+}
+
+/* ===== ENCABEZADO ===== */
+.encabezado {
+    font-weight: bolder;
+    border-bottom: 20px double rgb(212, 175, 55);
+    position: relative;
+    z-index: 10000;
+}
 
 .encabezado h1 {
-   text-align: center;
+    text-align: center;
     color: rgb(212, 175, 55);
     font-size: 42px;
     letter-spacing: 2px;
@@ -40,21 +51,22 @@ a{
     max-width: 500px;
     margin: 20px auto;
 }
+
 .encabezado h1:hover {
-    text-align: center;
     background-color: rgb(212, 175, 55);
     color: rgb(18, 18, 18);
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgb(255, 255, 255) ;
-    
+    box-shadow: 0 0 15px rgb(255, 255, 255);
 }
-/* Modifica el brillo del encabezado en donde estan las secciones*/
+
 .encabezado nav {
     width: 90%;
     margin: 20px auto;
     border-radius: 20px;
     overflow: visible;
     box-shadow: 0px 0px 22px rgb(152, 9, 9);
+    position: relative;
+    z-index: 10000;
 }
 
 .encabezado ul {
@@ -76,26 +88,15 @@ a{
     border-radius: 10px;
     transition: all 0.3s ease;
     display: inline-block;
-    
 }
 
 .encabezado li a:hover {
     background-color: rgb(212, 175, 55);
     color: rgb(18, 18, 18);
     transform: scale(1.05);
-    
 }
 
-.encabezado p {
-    font-size: 20px;
-    text-align: center;
-    width: 45%;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-/* MENÚ DESPLEGABLE (Recetas / Dietas Especiales) con hover */
-
+/* ===== MENÚ DESPLEGABLE ===== */
 .menu-desplegable {
     position: relative;
     padding-bottom: 15px;
@@ -150,7 +151,7 @@ a{
     margin-top: 0;
     list-style: none;
     box-shadow: 0px 6px 15px rgba(212, 175, 55, 0.4);
-    z-index: 1000;
+    z-index: 9999;
     justify-content: flex-start;
 }
 
@@ -177,16 +178,13 @@ a{
     transform: none;
 }
 
-/* FOOTER */
-
-/* FOOTER */
-
+/* ===== FOOTER ===== */
 footer {
-    padding: 0px 0px;
+    padding: 0;
     text-align: center;
-    border-top: 8px double rgb(212,175,55);
+    border-top: 8px double rgb(212, 175, 55);
     margin-top: 25px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 footer h3 {
@@ -194,8 +192,6 @@ footer h3 {
     font-size: 2rem;
     margin-bottom: 18px;
 }
-
-/* CONTENEDOR GENERAL DE LAS DOS TARJETAS */
 
 .contenedor-contactos {
     display: flex;
@@ -207,8 +203,6 @@ footer h3 {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* TARJETAS */
 
 .contenedorfooter {
     display: flex;
@@ -222,8 +216,6 @@ footer h3 {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
 }
-
-/* ENLACES DENTRO DE LAS TARJETAS */
 
 .contenedorfooter a {
     display: flex;
@@ -267,41 +259,24 @@ footer h3 {
     color: rgb(18, 18, 18);
     transform: scale(1.05);
 }
-::-webkit-scrollbar
-{
-    background-color: black;
-}
-::-webkit-scrollbar-thumb
-{
-    background-color: rgb(212, 175, 55);
-}
+
 #btnSubir {
     display: none;
     position: fixed;
     bottom: 30px;
     right: 10px;
     z-index: 999;
-
     width: 48px;
     height: 48px;
-
     border: 1px solid #d4af37;
     border-radius: 50%;
-
     background-color: #222;
     color: #d4af37;
-
     font-size: 22px;
     font-weight: bold;
-
     cursor: pointer;
-
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-
-    transition: background-color 0.3s ease,
-                color 0.3s ease,
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #btnSubir:hover {
@@ -311,19 +286,17 @@ footer h3 {
     box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
 }
 
-/* Cuando llega al footer */
 #btnSubir.en-footer {
     position: absolute;
     bottom: 20px;
     right: 10px;
 }
 
-/* Footer */
 #miFooter {
     position: relative;
 }
 
-/* MENÚ HAMBURGUESA PARA MÓVIL */
+/* ===== MENÚ HAMBURGUESA ===== */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -332,7 +305,7 @@ footer h3 {
     gap: 5px;
     background: none;
     border: none;
-    z-index: 1001;
+    z-index: 9999;
 }
 
 .hamburger span {
@@ -355,7 +328,7 @@ footer h3 {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* RESPONSIVE DESIGN */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -375,7 +348,7 @@ footer h3 {
         border-radius: 0;
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
         transition: right 0.3s ease;
-        z-index: 1000;
+        z-index: 9998;
         padding: 80px 20px 20px;
         overflow-y: auto;
     }
@@ -441,6 +414,7 @@ footer h3 {
 
     .categorias-grid {
         grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
     }
 
     .contenedor-contactos {
@@ -471,7 +445,7 @@ footer h3 {
     }
 }
 
-/* ANIMACIONES SCROLL REVEAL - Compartido */
+/* ===== ANIMACIONES ===== */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -483,7 +457,6 @@ footer h3 {
     transform: translateY(0);
 }
 
-/* ANIMACIÓN DE ENTRADA */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -499,7 +472,7 @@ footer h3 {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* LOADING SPINNER */
+/* ===== PRELOADER ===== */
 .preloader {
     position: fixed;
     top: 0;
@@ -534,7 +507,7 @@ footer h3 {
     }
 }
 
-/* EFECTO DE PARTÍCULAS DE FONDO */
+/* ===== PARTÍCULAS ===== */
 .particles {
     position: fixed;
     top: 0;
@@ -572,7 +545,7 @@ footer h3 {
     }
 }
 
-/* ESTILOS PARA PÁGINA DE CONTACTO */
+/* ===== PÁGINAS ESPECIALES ===== */
 .contacto-section {
     max-width: 900px;
     margin: 50px auto;
@@ -606,7 +579,6 @@ footer h3 {
     text-align: center;
 }
 
-/* ESTILOS PARA PÁGINA NOSOTROS */
 .seccion-nosotros {
     max-width: 900px;
     margin: 50px auto;

@@ -68,7 +68,7 @@
 
         <!--========== PIZZA MARGHERITA ==========-->
 
-        <details class="receta">
+        <details class="receta" id="pizza-margherita">
             <summary>
                 <img src="../../imagenes/Recetas/Especialidad de la casa/pizzamargarita.jpg" alt="Pizza Margarita">
                 <h2>PIZZA MARGHERITA</h2>
@@ -183,7 +183,7 @@
 
         <!--========== CANELONES ==========-->
 
-        <details class="receta"> <summary> <img src=" ../../imagenes/Recetas/Especialidad de la casa/canelones_ia.png" alt="Canelones de carne"> <h2>CANELONES DE CARNE</h2> </summary>
+        <details class="receta" id="canelones"> <summary> <img src=" ../../imagenes/Recetas/Especialidad de la casa/canelones_ia.png" alt="Canelones de carne"> <h2>CANELONES DE CARNE</h2> </summary>
 
             <section class="contenido_receta">
             
@@ -333,7 +333,7 @@
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-    <details class="receta">
+    <details class="receta" id="locro">
             <summary>
                 <img src=" ../../imagenes/Recetas/Especialidad de la casa/locrazo.jfif" alt="Locro Argentino">
                 <h2>LOCRO ARGENTINO</h2>
@@ -479,7 +479,7 @@
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-    <details class="receta">
+    <details class="receta" id="empanadas">
 
     <summary>
         <img src=" ../../imagenes/Recetas/Especialidad de la casa/saltenas-beef-empanadas.jpg" alt="Empanadas">
@@ -637,7 +637,7 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-        <details class="receta">
+        <details class="receta" id="pastel-papa">
 
     <summary>
         <img src=" ../../imagenes/Recetas/Especialidad de la casa/papa2.png" alt="Pastel de Papa">
@@ -770,7 +770,7 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-            <details class="receta">
+            <details class="receta" id="milanesa">
              <summary>
                  <img src=" ../../imagenes/Recetas/Especialidad de la casa/mila.png" alt="Milanesa Napolitana">
                     <h2>MILANESA NAPOLITANA</h2>
@@ -919,7 +919,7 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-<details class="receta">
+<details class="receta" id="noquis">
     <summary>
         <img src=" ../../imagenes/Recetas/Especialidad de la casa/Ñoqi.jfif" alt="Ñoquis Caseros">
         <h2>ÑOQUIS DE PAPA</h2>
@@ -1087,5 +1087,21 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
+    <script>
+        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetReceta = document.getElementById(hash);
+                if (targetReceta && targetReceta.tagName === 'DETAILS') {
+                    targetReceta.open = true;
+                    // Scroll suave hacia la receta
+                    setTimeout(() => {
+                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
