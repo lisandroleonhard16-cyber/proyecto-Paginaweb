@@ -1,20 +1,21 @@
-/* CONTENEDOR GENERAL DE LA RECETA */
+/**
+ * CONTENIDO DE RECETA
+ * Estilos para el contenido detallado de cada receta (historia, ingredientes, pasos)
+ * Diseñado para ser usado dentro de las tarjetas desplegables de recetas
+ */
 
+/* Contenedor principal del contenido de la receta - caja oscura con bordes dorados */
 .contenido_receta{
     width: 85%;
     margin: 30px auto;
     padding: 30px;
-
     background-color: rgb(25,25,25);
-
     border: 2px solid rgb(212,175,55);
     border-radius: 15px;
-
     box-shadow: 0 0 20px rgba(212,175,55,0.35);
 }
 
-/* TITULOS */
-
+/* Títulos de las secciones (Historia, Ingredientes, Paso a paso) */
 .contenido_receta h3{
     color: rgb(212,175,55);
     margin-bottom: 15px;
@@ -22,8 +23,7 @@
     text-align: left;
 }
 
-/* HISTORIA */
-
+/* Sección de historia de la receta */
 .historia{
     margin-bottom: 40px;
 }
@@ -35,8 +35,7 @@
     font-size: 18px;
 }
 
-/* INGREDIENTES */
-
+/* Sección de ingredientes con tabla */
 .ingredientes{
     margin-bottom: 40px;
 }
@@ -63,8 +62,7 @@
     color: white;
 }
 
-/* PASOS */
-
+/* Sección de pasos de preparación con lista ordenada */
 .pasos{
     margin-top: 20px;
 }
@@ -79,27 +77,25 @@
     color: white;
 }
 
-/* TARJETA DESPLEGABLE */
-
+/* Tarjeta desplegable de receta (details/summary) */
 .receta{
     width: 90%;
     margin: 40px auto;
 }
 
-/* CABECERA */
-
+/* Cabecera de la tarjeta desplegable - cursor pointer para indicar interactividad */
 .receta summary{
     cursor: pointer;
     list-style: none;
     text-align: center;
 }
 
+/* Ocultar el marcador por defecto de details/summary */
 .receta summary::-webkit-details-marker{
     display: none;
 }
 
-/* FOTO */
-
+/* Imagen de la receta en la cabecera */
 .receta summary img{
     width: 100%;
     max-height: 250px;
@@ -108,16 +104,14 @@
     border: 2px solid rgb(212,175,55);
 }
 
-/* TITULO */
-
+/* Título de la receta */
 .receta summary h2{
     color: rgb(212,175,55);
     margin-top: 15px;
     font-size: 32px;
 }
 
-/* EFECTO */
-
+/* Efecto hover en la imagen - brillo dorado */
 .receta summary:hover img{
     box-shadow: 0 0 20px rgba(212,175,55,0.6);
     transition: 0.3s;

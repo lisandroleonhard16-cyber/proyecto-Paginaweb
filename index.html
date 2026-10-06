@@ -26,6 +26,12 @@
 
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Prefetch para páginas importantes -->
+    <link rel="prefetch" href="nosotros.html">
+    <link rel="prefetch" href="contacto.html">
+    <link rel="prefetch" href="html/Recetas/especialidad_casa.html">
 </head>
 
 <body class="foto_fondo">
@@ -80,9 +86,9 @@
         <!-- Carrusel destacado -->
         <section class="destacada">
             <h2 id="tituloDestacado">ESPECIALIDAD DE LA CASA: PIZZA MARGARITA</h2>
-            <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" id="imgDestacada" loading="lazy">
-            <button class="carrusel-btn prev" id="btnAnterior" aria-label="Anterior">❮</button>
-            <button class="carrusel-btn next" id="btnSiguiente" aria-label="Siguiente">❯</button>
+            <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" id="imgDestacada" loading="eager" width="900" height="600">
+            <button class="carrusel-btn prev" id="btnAnterior" aria-label="Anterior"></button>
+            <button class="carrusel-btn next" id="btnSiguiente" aria-label="Siguiente"></button>
         </section>
 
         <!-- Recetas Recientes -->
@@ -90,7 +96,7 @@
             <h2>Recetas Recientes</h2>
             <div class="grid-recetas">
                 <div class="tarjeta-receta scroll-reveal">
-                    <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy">
+                    <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy" width="400" height="300">
                     <div class="tarjeta-content">
                         <h3>Pizza Margarita</h3>
                         <div class="tarjeta-meta">
@@ -104,7 +110,7 @@
                 </div>
 
                 <div class="tarjeta-receta scroll-reveal">
-                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras" loading="lazy">
+                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras" loading="lazy" width="400" height="300">
                     <div class="tarjeta-content">
                         <h3>Pastas Caseras</h3>
                         <div class="tarjeta-meta">
@@ -118,7 +124,7 @@
                 </div>
 
                 <div class="tarjeta-receta scroll-reveal">
-                    <img src="imagenes/FotoMedio/flan con dulce de leche.jfif" alt="Flan con Dulce de Leche" loading="lazy">
+                    <img src="imagenes/FotoMedio/flan con dulce de leche.jfif" alt="Flan con Dulce de Leche" loading="lazy" width="400" height="300">
                     <div class="tarjeta-content">
                         <h3>Flan con Dulce de Leche</h3>
                         <div class="tarjeta-meta">
@@ -132,7 +138,7 @@
                 </div>
 
                 <div class="tarjeta-receta scroll-reveal">
-                    <img src="imagenes/FotoMedio/saltenas-beef-empanadas.jpg" alt="Empanadas Salteñas" loading="lazy">
+                    <img src="imagenes/FotoMedio/saltenas-beef-empanadas.jpg" alt="Empanadas Salteñas" loading="lazy" width="400" height="300">
                     <div class="tarjeta-content">
                         <h3>Empanadas Salteñas</h3>
                         <div class="tarjeta-meta">
@@ -152,7 +158,7 @@
             <h2>Destacados de la Semana</h2>
             <div class="destacados-grid">
                 <div class="tarjeta-destacada scroll-reveal">
-                    <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy">
+                    <img src="imagenes/FotoMedio/pizzamargarita.jpg" alt="Pizza Margarita" loading="lazy" width="500" height="350">
                     <div class="tarjeta-content">
                         <h3>Pizza Margarita</h3>
                         <div class="estrellas">★★★★★</div>
@@ -166,7 +172,7 @@
                 </div>
 
                 <div class="tarjeta-destacada scroll-reveal">
-                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras" loading="lazy">
+                    <img src="imagenes/FotoMedio/caseros.jfif" alt="Pastas Caseras" loading="lazy" width="500" height="350">
                     <div class="tarjeta-content">
                         <h3>Pastas Caseras</h3>
                         <div class="estrellas">★★★★☆</div>
@@ -238,32 +244,69 @@
         </div>
     </main>
 
-    <footer class="contacto" id="miFooter">
-        <h3>CONTACTOS</h3>
-        <div class="contenedor-contactos">
-            <div class="contenedorfooter">
-                <a href="https://www.instagram.com/licha.leonhard/">
-                    <img src="imagenes/instagramlogo.png" class="iconoIG" alt="Instagram">
-                    @licha.leonhard
-                </a>
-                <a href="https://www.instagram.com/yowaly13/">
-                    <img src="imagenes/instagramlogo.png" class="iconoIG" alt="Instagram">
-                    @yowaly13
-                </a>
+    <footer class="footer" id="miFooter">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Margarita Cocina</h3>
+                <p class="footer-description">
+                    Descubre recetas deliciosas y fáciles para compartir con tu familia. 
+                    Desde clásicos de la cocina italiana hasta opciones para dietas especiales, 
+                    encontrarás inspiración para cada ocasión.
+                </p>
             </div>
-            <div class="contenedorfooter">
-                <a href="https://workspace.google.com/intl/es/gmail/">
-                    <img src="imagenes/gmail.png" class="iconoIG" alt="Gmail">
-                    lisandroleonhard16@gmail.com
-                </a>
-                <a href="https://workspace.google.com/intl/es/gmail/">
-                    <img src="imagenes/gmail.png" class="iconoIG" alt="Gmail">
-                    valenjg13@gmail.com
-                </a>
+
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="html/Recetas/especialidad_casa.html">Especialidad de la Casa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-links">
+                    <li><a href="html/Recetas/pastas.html">Pastas</a></li>
+                    <li><a href="html/Recetas/carnes.html">Carnes</a></li>
+                    <li><a href="html/Recetas/ensaladas.html">Ensaladas</a></li>
+                    <li><a href="html/Recetas/postres.html">Postres</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/licha.leonhard/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="imagenes/instagramlogo.png" alt="Instagram">
+                        @licha.leonhard
+                    </a>
+                    <a href="https://www.instagram.com/yowaly13/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="imagenes/instagramlogo.png" alt="Instagram">
+                        @yowaly13
+                    </a>
+                </div>
+                <div class="footer-contact-item">
+                    <img src="imagenes/gmail.png" alt="Email">
+                    <a href="mailto:lisandroleonhard16@gmail.com">lisandroleonhard16@gmail.com</a>
+                </div>
+                <div class="footer-contact-item">
+                    <img src="imagenes/gmail.png" alt="Email">
+                    <a href="mailto:valenjg13@gmail.com">valenjg13@gmail.com</a>
+                </div>
             </div>
         </div>
-        <button class="botonsubir" id="btnSubir" title="Volver arriba">↑</button>
-        <p class="copyright">© 2026 Margarita Cocina. Todos los derechos reservados.</p>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 Margarita Cocina. Todos los derechos reservados.</p>
+            <ul class="footer-links-bottom">
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos de Uso</a></li>
+            </ul>
+        </div>
+
+        <button id="btnSubir" title="Volver arriba">↑</button>
     </footer>
 
     <script src="JavaScript/boton.js"></script>

@@ -1,4 +1,11 @@
+/**
+ * ESTILOS GENERALES (estilos.css)
+ * Estilos base y componentes compartidos de toda la página
+ * Incluye: body, encabezado, navegación, menú desplegable, footer responsive
+ */
+
 /* ===== ESTILOS GENERALES ===== */
+/* Configuración básica del body - fondo negro con imagen de fondo fija */
 body {
     margin: 0;
     background-color: rgb(0, 0, 0);
@@ -9,30 +16,36 @@ body {
     background-attachment: fixed;
 }
 
+/* Desplazamiento suave al navegar por anclas */
 html {
     scroll-behavior: smooth;
 }
 
+/* Estilos para todos los títulos - color dorado con sombra */
 h1, h2, h3 {
     color: rgb(212, 175, 55);
     text-shadow: 2px 2px 8px black;
 }
 
+/* Enlaces - color blanco sin subrayado */
 a {
     color: white;
     text-decoration: none;
 }
 
-/* ===== SCROLLBAR ===== */
+/* ===== SCROLLBAR PERSONALIZADO ===== */
+/* Fondo de la scrollbar - negro */
 ::-webkit-scrollbar {
     background-color: black;
 }
 
+/* Pulgar de la scrollbar - dorado */
 ::-webkit-scrollbar-thumb {
     background-color: rgb(212, 175, 55);
 }
 
-/* ===== ENCABEZADO ===== */
+/* ===== ENCABEZADO (HEADER) ===== */
+/* Contenedor del encabezado con borde doble dorado */
 .encabezado {
     font-weight: bolder;
     border-bottom: 20px double rgb(212, 175, 55);
@@ -47,7 +60,7 @@ a {
     letter-spacing: 2px;
     padding: 10px;
     border-radius: 15px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     max-width: 500px;
     margin: 20px auto;
 }
@@ -57,6 +70,10 @@ a {
     color: rgb(18, 18, 18);
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.encabezado h1 {
+    will-change: transform, background-color, color, box-shadow;
 }
 
 .encabezado nav {
@@ -86,7 +103,7 @@ a {
     font-size: 34px;
     padding: 8px 20px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     display: inline-block;
 }
 
@@ -94,6 +111,10 @@ a {
     background-color: rgb(212, 175, 55);
     color: rgb(18, 18, 18);
     transform: scale(1.05);
+}
+
+.encabezado li a {
+    will-change: transform, background-color, color;
 }
 
 /* ===== MENÚ DESPLEGABLE ===== */
@@ -178,7 +199,8 @@ a {
     transform: none;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (Estilos antiguos - reemplazados por footer.css) ===== */
+/* NOTA: Estos estilos se mantienen por compatibilidad, pero el nuevo footer usa footer.css */
 footer {
     padding: 0;
     text-align: center;
@@ -260,6 +282,7 @@ footer h3 {
     transform: scale(1.05);
 }
 
+/* Botón de volver arriba (scroll to top) */
 #btnSubir {
     display: none;
     position: fixed;
@@ -450,6 +473,7 @@ footer h3 {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
 }
 
 .scroll-reveal.revealed {
@@ -470,6 +494,7 @@ footer h3 {
 
 .fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
+    will-change: opacity, transform;
 }
 
 /* ===== PRELOADER ===== */

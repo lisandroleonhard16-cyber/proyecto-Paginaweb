@@ -1,5 +1,10 @@
-/* AVISO DE GLUTEN Y CONTAMINACIÓN CRUZADA */
+/**
+ * AVISO DE GLUTEN Y CONTAMINACIÓN CRUZADA
+ * Estilos para el aviso de precaución sobre gluten y contaminación cruzada
+ * Utilizado en páginas de recetas que requieren advertencias especiales
+ */
 
+/* Contenedor principal del aviso - diseño centrado con bordes dorados */
 .aviso-gluten {
     max-width: 700px;
     margin: 30px auto;
@@ -16,12 +21,14 @@
     transition: all 0.3s ease;
 }
 
+/* Efecto hover - elevación y brillo aumentado */
 .aviso-gluten:hover {
     transform: translateY(-3px) scale(1.01);
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
     border-color: #ffd700;
 }
 
+/* Texto en negrita resaltado en dorado */
 .aviso-gluten strong {
     color: rgb(212, 175, 55);
 }
