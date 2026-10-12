@@ -220,7 +220,6 @@ video {
     transform: scale(1.1);
 }
 
-/* Contenido de la tarjeta (título, meta, descripción) */
 .tarjeta-content {
     padding: 20px;
 }

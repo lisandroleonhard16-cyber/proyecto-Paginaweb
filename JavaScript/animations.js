@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     }
 });
 
-// SCROLL REVEAL ANIMATION
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -27,7 +27,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observar todos los elementos con clase scroll-reveal
+
 document.addEventListener('DOMContentLoaded', () => {
     const scrollElements = document.querySelectorAll('.scroll-reveal');
     scrollElements.forEach((element, index) => {

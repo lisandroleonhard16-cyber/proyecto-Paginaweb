@@ -23,7 +23,7 @@ const recetasDestacadas = [
 ];
 
 let indiceActual = 0;
-const TIEMPO_ROTACION = 3000;
+const TIEMPO_ROTACION = 2000;
 let intervaloCarrusel = null;
 let isTransitioning = false;
 

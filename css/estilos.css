@@ -63,6 +63,7 @@ a {
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     max-width: 500px;
     margin: 20px auto;
+    will-change: transform, background-color, color, box-shadow;
 }
 
 .encabezado h1:hover {
@@ -70,10 +71,6 @@ a {
     color: rgb(18, 18, 18);
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgb(255, 255, 255);
-}
-
-.encabezado h1 {
-    will-change: transform, background-color, color, box-shadow;
 }
 
 .encabezado nav {
