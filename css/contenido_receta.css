@@ -120,38 +120,3 @@
     box-shadow: 0 0 20px rgba(212,175,55,0.6);
     transition: 0.3s;
 }
-.seccion-nosotros {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 60px 20px 10px 20px;
-    background-color: #1a1a1a;
-    text-align: center;
-    border: 2px solid #d4af37;
-    border-radius: 20px;
-    box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.2);
-}
-
-.contenedor-nosotros {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.seccion-nosotros h2 {
-    color: #d4af37;
-    font-family: 'Georgia', serif;
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-
-.seccion-nosotros p {
-    color: #f0e6d2;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-.seccion-nosotros p:last-child {
-    margin-bottom: 40px;
-}

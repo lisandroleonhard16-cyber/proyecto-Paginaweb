@@ -1,25 +1,31 @@
-const btnSubir = document.getElementById("btnSubir");
-const footer = document.getElementById("miFooter");
+document.addEventListener("DOMContentLoaded", function() {
+  const btnSubir = document.getElementById("btnSubir");
+  const header = document.querySelector(".encabezado");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 400) {
-    btnSubir.style.display = "block";
-  } else {
-    btnSubir.style.display = "none";
+  if (!btnSubir) return;
+
+  function updateButtonVisibility() {
+    // Calcular la altura del encabezado
+    const headerHeight = header ? header.offsetHeight : 100;
+
+    // Mostrar el botón cuando el usuario baja un poco más del encabezado
+    if (window.scrollY > headerHeight + 50) {
+      btnSubir.classList.add("visible");
+    } else {
+      btnSubir.classList.remove("visible");
+    }
   }
 
-  const footerRect = footer.getBoundingClientRect();
+  // Event listener para scroll
+  window.addEventListener("scroll", updateButtonVisibility);
 
-  if (footerRect.top < window.innerHeight) {
-    btnSubir.classList.add("en-footer");
-  } else {
-    btnSubir.classList.remove("en-footer");
-  }
-});
+  // Verificar al cargar la página
+  updateButtonVisibility();
 
-btnSubir.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  btnSubir.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
 });
