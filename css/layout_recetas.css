@@ -1,0 +1,268 @@
+/**
+ * LAYOUT_RECETAS.CSS
+ * Nueva distribución de las páginas de categoría de recetas (carnes, pastas, etc.)
+ *  - Banner destacado arriba (.hero-receta)
+ *  - Grilla de tarjetas horizontales: imagen a la izquierda, título a la derecha (.lista-recetas)
+ *  - Al abrir una receta, la tarjeta ocupa todo el ancho y muestra su contenido debajo
+ *
+ * IMPORTANTE: cargar DESPUÉS de contenido_receta.css.
+ * Solo define distribución (tamaños, grillas, espaciados). Usa los mismos colores
+ * que ya existen en el sitio; no cambia fondo ni paleta.
+ */
+
+/* ===== CONTENEDOR GENERAL ===== */
+main {
+    width: 90%;          /* mismo ancho que la barra de navegación */
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ===== BANNER DESTACADO ===== */
+.hero-receta {
+    margin: 30px 0 28px;
+}
+
+.hero-receta__link {
+    display: flex;
+    align-items: stretch;
+    min-height: 200px;
+    background-color: rgb(25, 25, 25);
+    border: 2px solid rgb(212, 175, 55);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero-receta__link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.45);
+}
+
+/* La imagen ocupa ~60% y se funde con el fondo oscuro hacia la derecha */
+.hero-receta__link img {
+    flex: 0 0 60%;
+    width: 60%;
+    height: auto;
+    min-height: 200px;
+    max-height: 260px;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to right, #000 70%, transparent 100%);
+            mask-image: linear-gradient(to right, #000 70%, transparent 100%);
+}
+
+.hero-receta__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 30px 20px 10px;
+}
+
+.hero-receta__etiqueta {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: rgba(212, 175, 55, 0.15);
+    border-radius: 6px;
+    color: rgb(212, 175, 55);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero-receta__info h2 {
+    margin: 0;
+    font-family: "Georgia", serif;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+.hero-receta__info p {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}
+
+/* ===== GRILLA DE TARJETAS ===== */
+.lista-recetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+/* Tarjeta horizontal (sobrescribe el .receta de contenido_receta.css) */
+main .receta {
+    width: auto;
+    margin: 0;
+    background-color: rgb(25, 25, 25);
+    border: 2px solid rgb(212, 175, 55);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .receta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+}
+
+/* Cabecera de la tarjeta: imagen | título */
+main .receta summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0;
+    text-align: left;
+    min-height: 140px;
+    position: relative;
+}
+
+main .receta summary img {
+    flex: 0 0 42%;
+    width: 42%;
+    height: 140px;
+    max-height: none;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+}
+
+main .receta summary h2 {
+    flex: 1;
+    margin: 0;
+    padding: 10px 34px 10px 0;
+    font-family: "Georgia", serif;
+    font-size: 19px;
+    line-height: 1.25;
+}
+
+/* Flecha indicadora de que la tarjeta se despliega */
+main .receta summary::after {
+    content: '▾';
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    color: rgb(212, 175, 55);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+main .receta[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* El efecto de brillo del summary ya no hace falta sobre la imagen */
+main .receta summary:hover img {
+    box-shadow: none;
+}
+
+/* ===== RECETA ACTIVA (arriba, en el lugar del banner) ===== */
+.receta-activa:empty {
+    display: none;
+}
+
+.receta-activa {
+    margin: 30px 0 28px;
+}
+
+.receta-activa > .receta {
+    animation: aparecerReceta 0.4s ease;
+}
+
+@keyframes aparecerReceta {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TARJETA DE ARRIBA (abierta o cerrada) / TARJETA ABIERTA ===== */
+main .receta[open] {
+    grid-column: 1 / -1;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+}
+
+.receta-activa > .receta {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+}
+
+main .receta[open] summary,
+.receta-activa > .receta summary {
+    min-height: 200px;
+}
+
+main .receta[open] summary img,
+.receta-activa > .receta summary img {
+    flex-basis: 30%;
+    width: 30%;
+    height: 200px;
+}
+
+main .receta[open] summary h2,
+.receta-activa > .receta summary h2 {
+    font-size: 30px;
+}
+
+/* El contenido interno usa todo el ancho de la tarjeta abierta */
+main .receta .contenido_receta {
+    width: auto;
+    margin: 0 20px 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+    .lista-recetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-receta__link {
+        flex-direction: column;
+    }
+
+    .hero-receta__link img {
+        flex: none;
+        width: 100%;
+        max-height: 220px;
+        -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+                mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+    }
+
+    .hero-receta__info {
+        padding: 10px 20px 20px;
+    }
+
+    .hero-receta__info h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 640px) {
+    main {
+        width: 94%;
+    }
+
+    .lista-recetas {
+        grid-template-columns: 1fr;
+    }
+
+    main .receta[open] summary img,
+    .receta-activa > .receta summary img {
+        flex-basis: 42%;
+        width: 42%;
+        height: 140px;
+    }
+
+    main .receta[open] summary h2,
+    .receta-activa > .receta summary h2 {
+        font-size: 22px;
+    }
+
+    main .receta .contenido_receta {
+        margin: 0 10px 14px;
+        padding: 18px;
+    }
+}

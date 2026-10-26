@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/contenido_receta.css">
+    <link rel="stylesheet" href="../../css/layout_recetas.css">
     <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
@@ -60,6 +61,24 @@
 </header>
 
     <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#milanesa">
+                <img src="../../imagenes/Recetas/Carnes/mila.webp" alt="Milanesa napolitana">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>MILANESA NAPOLITANA</h2>
+                    <p>Un clásico de bodegones y hogares argentinos</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
 <!--==============MILANESA NAPOLITANA========================================================= -->
 
             <details class="receta" id="milanesa">
@@ -1909,6 +1928,7 @@
 
                 </section>
             </details>
+        </div><!-- /lista-recetas -->
     </main>
 
     <footer class="footer" id="miFooter">
@@ -1978,22 +1998,7 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
-    <script>
-        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
-        window.addEventListener('DOMContentLoaded', function() {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const targetReceta = document.getElementById(hash);
-                if (targetReceta && targetReceta.tagName === 'DETAILS') {
-                    targetReceta.open = true;
-                    // Scroll suave hacia la receta
-                    setTimeout(() => {
-                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 
 
 </body>
