@@ -509,7 +509,7 @@ a {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.8s ease-out;
     will-change: opacity, transform;
 }
 
