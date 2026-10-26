@@ -5,16 +5,30 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/contenido_receta.css">
+    <link rel="stylesheet" href="../../css/layout_recetas.css">
     <link rel="stylesheet" href="../../css/footer.css">
 
 </head>
 
 <body>
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Partículas de fondo -->
+<div class="particles" id="particles"></div>
 
    <header id="inicio" class="encabezado">
     <h1><a href="../../index.html">MARGARITA COCINA</a></h1>
 
-    <nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="nav">
         <ul>
             <li class="menu-desplegable">
                 <span class="menu-toggle">Recetas <span class="flecha">▾</span></span>
@@ -49,11 +63,30 @@
 </header>
 
     <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#mojito">
+                <img src="../../imagenes/Recetas/Tragos/mojito.webp" alt="Mojito">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>MOJITO</h2>
+                    <p>Uno de los cócteles más reconocidos de Cuba</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
+
             <!-- ===================================================== -->
             <!-- MOJITO -->
             <!-- ===================================================== -->
 
-            <details class="receta">
+            <details class="receta" id="mojito">
                 <summary>
                     <img src="../../imagenes/Recetas/Tragos/mojito.webp" alt="Mojito">
                     <h2>MOJITO</h2>
@@ -841,6 +874,8 @@
 
                 </section>
             </details>
+
+        </div><!-- /lista-recetas -->
     </main>
 
     <footer class="footer" id="miFooter">
@@ -910,22 +945,7 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
-    <script>
-        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
-        window.addEventListener('DOMContentLoaded', function() {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const targetReceta = document.getElementById(hash);
-                if (targetReceta && targetReceta.tagName === 'DETAILS') {
-                    targetReceta.open = true;
-                    // Scroll suave hacia la receta
-                    setTimeout(() => {
-                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 
 
 </body>

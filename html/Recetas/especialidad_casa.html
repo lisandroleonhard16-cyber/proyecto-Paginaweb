@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../../css/estilos.css">
         <link rel="stylesheet" href="../../css/home.css">
         <link rel="stylesheet" href="../../css/contenido_receta.css">
+        <link rel="stylesheet" href="../../css/layout_recetas.css">
         <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
@@ -60,11 +61,26 @@
         </ul>
     </nav>
 </header>
-    
+
     <main>
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-       <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#pizza-margherita">
+                <img src="../../imagenes/Recetas/Especialidad de la casa/pizzamargarita.webp" alt="Pizza Margarita">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>PIZZA MARGHERITA</h2>
+                    <p>Un emblema de la gastronomía italiana con colores de la bandera</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
 
         <!--========== PIZZA MARGHERITA ==========-->
 
@@ -183,7 +199,11 @@
 
         <!--========== CANELONES ==========-->
 
-        <details class="receta" id="canelones"> <summary> <img src=" ../../imagenes/Recetas/Especialidad de la casa/canelones_ia.webp" alt="Canelones de carne"> <h2>CANELONES DE CARNE</h2> </summary>
+        <details class="receta" id="canelones">
+            <summary>
+                <img src="../../imagenes/Recetas/Especialidad de la casa/canelones_ia.webp" alt="Canelones de carne">
+                <h2>CANELONES DE CARNE</h2>
+            </summary>
 
             <section class="contenido_receta">
             
@@ -335,7 +355,7 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <details class="receta" id="locro">
             <summary>
-                <img src=" ../../imagenes/Recetas/Especialidad de la casa/locrazo.webp" alt="Locro Argentino">
+                <img src="../../imagenes/Recetas/Especialidad de la casa/locrazo.webp" alt="Locro Argentino">
                 <h2>LOCRO ARGENTINO</h2>
             </summary>
         
@@ -482,7 +502,7 @@
     <details class="receta" id="empanadas">
 
     <summary>
-        <img src=" ../../imagenes/Recetas/Especialidad de la casa/saltenas-beef-empanadas.webp" alt="Empanadas">
+        <img src="../../imagenes/Recetas/Especialidad de la casa/saltenas-beef-empanadas.webp" alt="Empanadas">
         <h2>EMPANADAS SALTEÑAS</h2>
     </summary>
 
@@ -640,7 +660,7 @@
         <details class="receta" id="pastel-papa">
 
     <summary>
-        <img src=" ../../imagenes/Recetas/Especialidad de la casa/papa2.webp" alt="Pastel de Papa">
+        <img src="../../imagenes/Recetas/Especialidad de la casa/papa2.webp" alt="Pastel de Papa">
         <h2>PASTEL DE PAPA</h2>
     </summary>
 
@@ -772,7 +792,7 @@
 
             <details class="receta" id="milanesa">
              <summary>
-                 <img src=" ../../imagenes/Recetas/Especialidad de la casa/mila.webp" alt="Milanesa Napolitana">
+                 <img src="../../imagenes/Recetas/Especialidad de la casa/mila.webp" alt="Milanesa Napolitana">
                     <h2>MILANESA NAPOLITANA</h2>
              </summary>
 
@@ -921,7 +941,7 @@
 
 <details class="receta" id="noquis">
     <summary>
-        <img src=" ../../imagenes/Recetas/Especialidad de la casa/Ñoqi.webp" alt="Ñoquis Caseros">
+        <img src="../../imagenes/Recetas/Especialidad de la casa/Ñoqi.webp" alt="Ñoquis Caseros">
         <h2>ÑOQUIS DE PAPA</h2>
     </summary>
 
@@ -1044,6 +1064,7 @@
     </section>
 </details>
 
+        </div><!-- /lista-recetas -->
     </main>
     
     <footer class="footer" id="miFooter">
@@ -1114,21 +1135,6 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
-    <script>
-        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
-        window.addEventListener('DOMContentLoaded', function() {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const targetReceta = document.getElementById(hash);
-                if (targetReceta && targetReceta.tagName === 'DETAILS') {
-                    targetReceta.open = true;
-                    // Scroll suave hacia la receta
-                    setTimeout(() => {
-                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 </body>
 </html>

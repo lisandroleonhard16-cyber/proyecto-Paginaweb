@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/contenido_receta.css">
+    <link rel="stylesheet" href="../../css/layout_recetas.css">
     <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
@@ -60,9 +61,27 @@
 </header>
 
     <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#ensalada-cesar">
+                <img src="../../imagenes/Recetas/Ensaladas/Ensalada cesar.webp" alt="Ensalada César">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>ENSALADA CÉSAR</h2>
+                    <p>Una de las ensaladas más conocidas internacionalmente</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
 <!-- ========================ENSALADA CÉSAR=============================================== -->
 
-            <details class="receta">
+            <details class="receta" id="ensalada-cesar">
                 <summary>
                     <img src="../../imagenes/Recetas/Ensaladas/Ensalada cesar.webp" alt="Ensalada César">
                     <h2>ENSALADA CÉSAR</h2>
@@ -1199,6 +1218,7 @@
 
                 </section>
             </details>
+        </div><!-- /lista-recetas -->
     </main>
 
     <footer class="footer" id="miFooter">
@@ -1268,22 +1288,7 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
-    <script>
-        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
-        window.addEventListener('DOMContentLoaded', function() {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const targetReceta = document.getElementById(hash);
-                if (targetReceta && targetReceta.tagName === 'DETAILS') {
-                    targetReceta.open = true;
-                    // Scroll suave hacia la receta
-                    setTimeout(() => {
-                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 
 
 </body>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/contenido_receta.css">
+    <link rel="stylesheet" href="../../css/layout_recetas.css">
     <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
@@ -60,6 +61,24 @@
 </header>
 
     <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#spaghetti-bolonesa">
+                <img src="../../imagenes/Recetas/Pastas/FIdeos boloñesa 3.webp" alt="Spaghetti a la Boloñesa">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>SPAGHETTI A LA BOLOÑESA</h2>
+                    <p>Un clásico de la cocina argentina con raíces italianas</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
  <!-- =======================SPAGHETTI A LA BOLOÑESA========================================== -->
 
             <details class="receta" id="spaghetti-bolonesa">
@@ -390,7 +409,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/Ñoqi.webp" alt="Ñoquis de Papa">
+                    <img src="../../imagenes/Recetas/Pastas/Ñoqi.webp" alt="Ñoquis de Papa">
                     <h2>ÑOQUIS DE PAPA</h2>
                 </summary>
 
@@ -493,7 +512,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/ñoji de calabaza.webp" alt="Ñoquis de Calabaza">
+                    <img src="../../imagenes/Recetas/Pastas/ñoji de calabaza.webp" alt="Ñoquis de Calabaza">
                     <h2>ÑOQUIS DE CALABAZA</h2>
                 </summary>
 
@@ -596,7 +615,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/Ravioles.webp"  alt="Ravioles de Carne">
+                    <img src="../../imagenes/Recetas/Pastas/Ravioles.webp" alt="Ravioles de Carne">
                     <h2>RAVIOLES DE CARNE</h2>
                 </summary>
 
@@ -729,7 +748,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/Lasaña.webp" alt="Lasagna de Carne">
+                    <img src="../../imagenes/Recetas/Pastas/Lasaña.webp" alt="Lasagna de Carne">
                     <h2>LASAGNA DE CARNE</h2>
                 </summary>
 
@@ -986,7 +1005,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/Canelones de espinaca.webp   " alt="Canelones de ricota y espinaca">
+                    <img src="../../imagenes/Recetas/Pastas/Canelones de espinaca.webp" alt="Canelones de ricota y espinaca">
                     <h2>CANELONES DE RICOTA Y ESPINACA</h2>
                 </summary>
 
@@ -1090,7 +1109,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/fetuchisini alfredini.webp" alt="Fettuccine Alfredo">
+                    <img src="../../imagenes/Recetas/Pastas/fetuchisini alfredini.webp" alt="Fettuccine Alfredo">
                     <h2>FETTUCCINE ALFREDO</h2>
                 </summary>
 
@@ -1178,7 +1197,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/fettuccinePollo.webp" alt="Fettuccine con pollo y crema">
+                    <img src="../../imagenes/Recetas/Pastas/fettuccinePollo.webp" alt="Fettuccine con pollo y crema">
                     <h2>FETTUCCINE CON POLLO Y CREMA</h2>
                 </summary>
 
@@ -1271,7 +1290,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/sorrentinos.webp" alt="Sorrentinos de jamón y queso">
+                    <img src="../../imagenes/Recetas/Pastas/sorrentinos.webp" alt="Sorrentinos de jamón y queso">
                     <h2>SORRENTINOS DE JAMÓN Y QUESO</h2>
                 </summary>
 
@@ -1361,7 +1380,7 @@
 
             <details class="receta" id="tallarines-caseros">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/caseros.webp" alt="Tallarines caseros">
+                    <img src="../../imagenes/Recetas/Pastas/caseros.webp" alt="Tallarines caseros">
                     <h2>TALLARINES CASEROS</h2>
                 </summary>
 
@@ -1452,7 +1471,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/champiñon.webp" alt="Pasta con salsa de hongos">
+                    <img src="../../imagenes/Recetas/Pastas/champiñon.webp" alt="Pasta con salsa de hongos">
                     <h2>PASTA CON SALSA DE HONGOS Y CHAMPIÑONES</h2>
                 </summary>
 
@@ -1546,7 +1565,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/salsarosa.webp" alt="Pasta con salsa rosa">
+                    <img src="../../imagenes/Recetas/Pastas/salsarosa.webp" alt="Pasta con salsa rosa">
                     <h2>PASTA CON SALSA ROSA</h2>
                 </summary>
 
@@ -1640,7 +1659,7 @@
 
             <details class="receta">
                 <summary>
-                    <img src=" ../../imagenes/Recetas/Pastas/pasta pesto.webp" alt="Pasta al pesto">
+                    <img src="../../imagenes/Recetas/Pastas/pasta pesto.webp" alt="Pasta al pesto">
                     <h2>PASTA AL PESTO</h2>
                 </summary>
 
@@ -1731,6 +1750,7 @@
                 </section>
             </details>
 
+        </div><!-- /lista-recetas -->
     </main>
 
     <footer class="footer" id="miFooter">
@@ -1801,22 +1821,7 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
-    <script>
-        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
-        window.addEventListener('DOMContentLoaded', function() {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const targetReceta = document.getElementById(hash);
-                if (targetReceta && targetReceta.tagName === 'DETAILS') {
-                    targetReceta.open = true;
-                    // Scroll suave hacia la receta
-                    setTimeout(() => {
-                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 
 
 </body>

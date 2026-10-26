@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/contenido_receta.css">
+    <link rel="stylesheet" href="../../css/layout_recetas.css">
     <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
@@ -47,11 +48,29 @@
 
 
     <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#flan-sin-lactosa">
+                <img src="../../imagenes/Recetas Especiales/Sin Lactosa/Flan.webp" alt="Flan sin lactosa">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>FLAN</h2>
+                    <p>Una versión sustituyendo la leche vacuna por leche vegetal</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
             <!-- ===================================================== -->
             <!-- FLAN SIN LACTOSA -->
             <!-- ===================================================== -->
 
-            <details class="receta">
+            <details class="receta" id="flan-sin-lactosa">
                 <summary>
                     <img src="../../imagenes/Recetas Especiales/Sin Lactosa/Flan.webp" alt="Flan sin lactosa">
                     <h2>FLAN</h2>
@@ -1147,6 +1166,8 @@
 
                 </section>
             </details>
+
+        </div><!-- /lista-recetas -->
     </main>
 
     <footer class="footer" id="miFooter">
@@ -1217,6 +1238,7 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 
 
 </body>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/contenido_receta.css">
+    <link rel="stylesheet" href="../../css/layout_recetas.css">
     <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
@@ -46,11 +47,29 @@
 </header>
 
     <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#omelette-claras-verduras">
+                <img src="../../imagenes/Recetas Especiales/Altas Proteinas/Omelette de clara y verdura.webp" alt="Omelette de claras y verduras">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>OMELETTE DE CLARAS Y VERDURAS</h2>
+                    <p>Una opción ligera, nutritiva e ideal para desayunos</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
             <!-- ===================================================== -->
             <!-- OMELETTE DE CLARAS Y VERDURAS -->
             <!-- ===================================================== -->
 
-            <details class="receta">
+            <details class="receta" id="omelette-claras-verduras">
                 <summary>
                     <img src="../../imagenes/Recetas Especiales/Altas Proteinas/Omelette de clara y verdura.webp" alt="Omelette de claras y verduras">
                     <h2>OMELETTE DE CLARAS Y VERDURAS</h2>
@@ -1364,6 +1383,8 @@
 
                 </section>
             </details>
+
+        </div><!-- /lista-recetas -->
     </main>
 
     <footer class="footer" id="miFooter">
@@ -1434,6 +1455,7 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 
 
 </body>

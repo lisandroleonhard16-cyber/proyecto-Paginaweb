@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../css/estilos.css">
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/contenido_receta.css">
+    <link rel="stylesheet" href="../../css/layout_recetas.css">
     <link rel="stylesheet" href="../../css/footer.css">
 
 </head>
@@ -62,8 +63,25 @@
     </nav>
 </header>
 
-        <main class="carrusel">
-            <div class="contenedor-recetas">
+        <main>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#flan">
+                <img src="../../imagenes/Recetas/Postres/flan con dulce de leche.webp" alt="Flan con Dulce de Leche">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>FLAN CON DULCE DE LECHE</h2>
+                    <p>Un clásico infaltable de las mesas familiares argentinas</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
 
                 <!--========== FLAN CON DULCE DE LECHE ==========-->
 
@@ -354,8 +372,6 @@
 
                     </section>
                 </details>
-
-            </div>
 
 <!-- ================================================== -->
 <!-- TIRAMISÚ -->
@@ -1234,7 +1250,8 @@
                     </section>
                 </details>
 
-        </main>
+        </div><!-- /lista-recetas -->
+    </main>
 
     <footer class="footer" id="miFooter">
         <div class="footer-container">
@@ -1303,22 +1320,7 @@
     <script src="../../JavaScript/boton.js"></script>
     <script src="../../JavaScript/menu.js"></script>
     <script src="../../JavaScript/animations.js"></script>
-    <script>
-        // Abrir automáticamente la receta correspondiente si hay un hash en la URL
-        window.addEventListener('DOMContentLoaded', function() {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const targetReceta = document.getElementById(hash);
-                if (targetReceta && targetReceta.tagName === 'DETAILS') {
-                    targetReceta.open = true;
-                    // Scroll suave hacia la receta
-                    setTimeout(() => {
-                        targetReceta.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <script src="../../JavaScript/recetas_layout.js"></script>
 
 
 </body>
