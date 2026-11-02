@@ -41,6 +41,19 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Navbar flotante: marca cuando el usuario bajó y cuánto avanzó en la página
+function actualizarScroll() {
+    const y = window.scrollY;
+    document.body.classList.toggle('con-scroll', y > 40);
+
+    const maximo = document.documentElement.scrollHeight - window.innerHeight;
+    const progreso = maximo > 0 ? Math.min(y / maximo, 1) : 0;
+    nav.style.setProperty('--progreso', progreso.toFixed(4));
+}
+
+window.addEventListener('scroll', actualizarScroll, { passive: true });
+actualizarScroll();
+
 // Cerrar menú al cambiar tamaño de pantalla
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
