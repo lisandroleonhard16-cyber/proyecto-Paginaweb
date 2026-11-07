@@ -49,15 +49,33 @@
 
 
     <main>
-        
+
         <div class="aviso-gluten">
         <strong>¡Atención!</strong> Verificar que todos los productos utilizados estén certificados como libres de gluten y evitar la contaminación cruzada.
         </div>
+
+        <!-- ===== BANNER DESTACADO ===== -->
+        <section class="hero-receta">
+            <a class="hero-receta__link" href="#pizza-sintacc">
+                <img src="../../imagenes/Recetas Especiales/Sin TACC/pizza sin TaCC.webp" alt="Pizza sin TACC">
+                <div class="hero-receta__info">
+                    <span class="hero-receta__etiqueta">Receta estrella de la semana</span>
+                    <h2>PIZZA</h2>
+                    <p>Una versión apta para celíacos con premezcla sin TACC</p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Aquí sube la receta clickeada (reemplaza al banner mientras está abierta) -->
+        <div id="receta-activa" class="receta-activa"></div>
+
+        <!-- ===== GRILLA DE RECETAS ===== -->
+        <div class="lista-recetas">
                 <!-- ===================================================== -->
                 <!-- PIZZA SIN TACC -->
                 <!-- ===================================================== -->
 
-                <details class="receta">
+                <details class="receta" id="pizza-sintacc">
                     <summary>
                         <img src="../../imagenes/Recetas Especiales/Sin TACC/pizza sin TaCC.webp" alt="Pizza sin TACC">
                         <h2>PIZZA</h2>
@@ -1183,7 +1201,7 @@
                     </section>
                 </details>
 
-               
+        </div><!-- /lista-recetas -->
     </main>
 
     <footer class="footer" id="miFooter">

@@ -1,0 +1,269 @@
+/**
+ * FORMULARIO_RECETA.CSS
+ * Estilos del formulario "Envía tu receta" de contacto.html.
+ * Usa solo la paleta del sitio (dorado, grises oscuros, blanco y el rojo oscuro ya usado en sombras).
+ * Cargar después de estilos.css, home.css y footer.css.
+ */
+
+.form-receta-section {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(30, 30, 30, 0.95);
+    border: 2px solid rgb(212, 175, 55);
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+.form-receta-section > h2 {
+    text-align: center;
+    font-family: "Georgia", serif;
+    font-size: 32px;
+    margin: 0 0 12px;
+}
+
+.form-receta-intro {
+    text-align: center;
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 32px;
+}
+
+/* ===== CAMPOS ===== */
+.form-receta {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.form-campo > label,
+.form-campo > legend {
+    color: rgb(212, 175, 55);
+    font-family: "Georgia", serif;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.form-ayuda {
+    color: #ccc;
+    font-size: 13px;
+    margin: 0;
+}
+
+.form-receta input[type="text"],
+.form-receta select,
+.form-receta textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    background-color: rgb(20, 20, 20);
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color-scheme: dark;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-receta textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-receta input[type="text"]:focus,
+.form-receta select:focus,
+.form-receta textarea:focus {
+    outline: none;
+    border-color: rgb(212, 175, 55);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+.form-contador {
+    align-self: flex-end;
+    color: #888;
+    font-size: 12px;
+}
+
+/* ===== TIPOS DE RECETA (chips) ===== */
+.form-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-chip {
+    position: relative;
+    cursor: pointer;
+}
+
+.form-chip input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.form-chip span {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid rgb(212, 175, 55);
+    border-radius: 20px;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: rgb(212, 175, 55);
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.form-chip:hover span {
+    transform: translateY(-2px);
+}
+
+.form-chip input:checked + span {
+    background-color: rgb(212, 175, 55);
+    color: black;
+}
+
+.form-chip input:focus-visible + span {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* ===== IMAGEN ===== */
+.form-imagen {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 18px;
+    background-color: rgb(20, 20, 20);
+    border: 2px dashed rgba(212, 175, 55, 0.6);
+    border-radius: 12px;
+}
+
+.form-imagen input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.form-imagen-boton {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid rgb(212, 175, 55);
+    border-radius: 10px;
+    color: rgb(212, 175, 55);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-imagen-boton:hover,
+.form-imagen:focus-within .form-imagen-boton {
+    background-color: rgb(212, 175, 55);
+    color: black;
+}
+
+.form-imagen-nombre {
+    flex: 1;
+    min-width: 150px;
+    color: #ccc;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.form-vista-previa {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border: 2px solid rgb(212, 175, 55);
+    border-radius: 12px;
+}
+
+/* ===== BOTÓN Y MENSAJES ===== */
+.form-boton {
+    align-self: center;
+    padding: 13px 40px;
+    border: 2px solid rgb(212, 175, 55);
+    border-radius: 10px;
+    background-color: rgb(212, 175, 55);
+    color: black;
+    font-family: "Georgia", serif;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.form-boton:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+}
+
+.form-boton:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.form-mensaje {
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.form-mensaje.ok {
+    background-color: rgba(212, 175, 55, 0.15);
+    border: 2px solid rgb(212, 175, 55);
+    color: white;
+}
+
+.form-mensaje.error {
+    background-color: rgb(152, 9, 9);
+    border: 2px solid rgb(152, 9, 9);
+    color: white;
+}
+
+/* Campo trampa anti-bots: invisible para las personas */
+.form-trampa {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .form-receta-section {
+        padding: 28px 20px;
+    }
+
+    .form-fila {
+        grid-template-columns: 1fr;
+    }
+}

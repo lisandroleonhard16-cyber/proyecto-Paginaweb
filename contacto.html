@@ -27,15 +27,11 @@
     <link rel="stylesheet" href="css/receta_tradicional.css">
     <link rel="stylesheet" href="css/contenido_receta.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/formulario_receta.css">
     
 </head>
 
 <body class="foto_fondo">
-
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="spinner"></div>
-    </div>
 
     <!-- Partículas de fondo -->
     <div class="particles" id="particles"></div>
@@ -120,6 +116,78 @@
 
             </div>
         </section>
+
+        <!-- ===== FORMULARIO: ENVÍA TU RECETA ===== -->
+        <section class="form-receta-section scroll-reveal" id="enviar-receta">
+            <h2>Envía tu receta</h2>
+            <p class="form-receta-intro">
+                ¿Tienes una receta que quieras compartir? Cuéntanos de qué se trata y súbenos una foto.
+                La revisaremos antes de publicarla en el sitio.
+            </p>
+
+            <form id="formReceta" class="form-receta" action="php/enviar_receta.php" method="post" enctype="multipart/form-data">
+
+                <div class="form-fila">
+                    <div class="form-campo">
+                        <label for="nombre">Nombre de la receta</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="80" placeholder="Ej.: Ñoquis de la abuela" autocomplete="off">
+                    </div>
+
+                    <div class="form-campo">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Elige una categoría</option>
+                            <option value="especialidad-casa">Especialidad de la casa</option>
+                            <option value="pastas">Pastas</option>
+                            <option value="carnes">Carnes</option>
+                            <option value="ensaladas">Ensaladas</option>
+                            <option value="postres">Postres</option>
+                            <option value="tragos">Tragos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <fieldset class="form-campo">
+                    <legend>Tipo de receta</legend>
+                    <p class="form-ayuda">Marca las que correspondan. Si es una receta común, no marques ninguna.</p>
+                    <div class="form-chips">
+                        <label class="form-chip"><input type="checkbox" name="tipos[]" value="vegetariana"><span>Vegetariana</span></label>
+                        <label class="form-chip"><input type="checkbox" name="tipos[]" value="vegana"><span>Vegana</span></label>
+                        <label class="form-chip"><input type="checkbox" name="tipos[]" value="sintacc"><span>Sin TACC</span></label>
+                        <label class="form-chip"><input type="checkbox" name="tipos[]" value="sinlactosa"><span>Sin lactosa</span></label>
+                        <label class="form-chip"><input type="checkbox" name="tipos[]" value="sinazucar"><span>Sin azúcar</span></label>
+                        <label class="form-chip"><input type="checkbox" name="tipos[]" value="altasproteinas"><span>Altas en proteínas</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="form-campo">
+                    <label for="imagen">Imagen de la receta</label>
+                    <div class="form-imagen">
+                        <input type="file" id="imagen" name="imagen" accept="image/jpeg,image/png,image/webp" required>
+                        <label for="imagen" class="form-imagen-boton">Elegir imagen</label>
+                        <span class="form-imagen-nombre" id="nombreArchivo">Ningún archivo seleccionado</span>
+                        <img id="vistaPrevia" class="form-vista-previa" alt="Vista previa de la imagen elegida" hidden>
+                    </div>
+                    <p class="form-ayuda">Formatos JPG, PNG o WEBP. Máximo 5 MB.</p>
+                </div>
+
+                <div class="form-campo">
+                    <label for="descripcion">Descripción (opcional)</label>
+                    <textarea id="descripcion" name="descripcion" maxlength="500" placeholder="Cuéntanos un poco sobre la receta: ingredientes principales, de dónde viene, para qué ocasión es…"></textarea>
+                    <span class="form-contador" id="contadorDescripcion">0 / 500</span>
+                </div>
+
+                <!-- Campo trampa para bots: dejar vacío -->
+                <div class="form-trampa" aria-hidden="true">
+                    <label for="sitio_web">No completar este campo</label>
+                    <input type="text" id="sitio_web" name="sitio_web" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div class="form-mensaje" id="formMensaje" role="status" aria-live="polite" hidden></div>
+
+                <button type="submit" class="form-boton" id="formBoton">Enviar receta</button>
+            </form>
+        </section>
     </main>
 
     <footer class="footer" id="miFooter">
@@ -190,6 +258,7 @@
     <script src="JavaScript/carrusel.js"></script>
     <script src="JavaScript/menu.js"></script>
     <script src="JavaScript/animations.js"></script>
+    <script src="JavaScript/formulario_receta.js"></script>
 
 </body>
 </html>
