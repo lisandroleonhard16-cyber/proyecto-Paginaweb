@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/contenido_receta.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/formulario_receta.css">
+    <link rel="stylesheet" href="css/cuenta.css">
     
 </head>
 
@@ -120,12 +121,16 @@
         <!-- ===== FORMULARIO: ENVÍA TU RECETA ===== -->
         <section class="form-receta-section scroll-reveal" id="enviar-receta">
             <h2>Envía tu receta</h2>
-            <p class="form-receta-intro">
+            <p class="form-receta-intro" id="introReceta">
                 ¿Tienes una receta que quieras compartir? Cuéntanos de qué se trata y súbenos una foto.
                 La revisaremos antes de publicarla en el sitio.
             </p>
+            <div class="aviso-sin-sesion" id="avisoSinSesion" hidden>
+                <p>Para enviar tu receta primero inicia sesión o crea una cuenta con el botón «Ingresar» de arriba a la derecha.</p>
+                <button type="button" class="form-boton" data-abrir-login>Ingresar</button>
+            </div>
 
-            <form id="formReceta" class="form-receta" action="php/enviar_receta.php" method="post" enctype="multipart/form-data">
+            <form id="formReceta" class="form-receta" action="php/enviar_receta.php" method="post" enctype="multipart/form-data" hidden>
 
                 <div class="form-fila">
                     <div class="form-campo">
@@ -259,6 +264,7 @@
     <script src="JavaScript/menu.js"></script>
     <script src="JavaScript/animations.js"></script>
     <script src="JavaScript/formulario_receta.js"></script>
+    <script src="JavaScript/cuenta.js"></script>
 
 </body>
 </html>

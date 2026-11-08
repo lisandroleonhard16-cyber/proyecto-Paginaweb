@@ -11,7 +11,7 @@
  */
 declare(strict_types=1);
 
-session_start();
+require_once __DIR__ . '/auth.php';
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
@@ -67,6 +67,12 @@ function limpiarTexto(string $texto): string
 /* ===== VALIDACIONES GENERALES ===== */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     responder(false, 'Método no permitido.', 405);
+}
+
+// Solo usuarios registrados pueden enviar recetas.
+$usuario = usuarioActual();
+if ($usuario === null) {
+    responder(false, 'Debes iniciar sesión o crear una cuenta para enviar una receta.', 401);
 }
 
 // Campo trampa para bots: las personas no lo ven ni lo completan.
@@ -167,6 +173,7 @@ if (!move_uploaded_file($archivo['tmp_name'], $rutaDestino)) {
 
 $registro = [
     'id'          => bin2hex(random_bytes(8)),
+    'autor'       => $usuario['usuario'],
     'nombre'      => $nombre,
     'categoria'   => $categoria,
     'tipos'       => $tipos,

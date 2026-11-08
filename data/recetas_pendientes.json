@@ -1,0 +1,40 @@
+[
+    {
+        "id": "004fe4773545f711",
+        "nombre": "pepe",
+        "categoria": "pastas",
+        "tipos": [],
+        "descripcion": "hola",
+        "imagen": "uploads/pendientes/3ecd688d1ae13a9e10088593.png",
+        "estado": "rechazada",
+        "fecha": "2026-11-07T17:11:00-03:00",
+        "revisada_por": "admin",
+        "fecha_revision": "2026-11-07T21:38:49+01:00"
+    },
+    {
+        "id": "8f49845c81c4a576",
+        "autor": "pepe",
+        "nombre": "cvdfdfdfdfd",
+        "categoria": "especialidad-casa",
+        "tipos": [],
+        "descripcion": "dfasf",
+        "imagen": "uploads/pendientes/8e6c598502a4c41334193d86.png",
+        "estado": "rechazada",
+        "fecha": "2026-11-07T17:38:33-03:00",
+        "revisada_por": "admin",
+        "fecha_revision": "2026-11-07T21:38:51+01:00"
+    },
+    {
+        "id": "40d454ad3c7642f6",
+        "autor": "pepe",
+        "nombre": "ROBGETO CARLOSS",
+        "categoria": "especialidad-casa",
+        "tipos": [],
+        "descripcion": "sssd",
+        "imagen": "uploads/aprobadas/a54f19029cb9de6d61d0e97d.png",
+        "estado": "aprobada",
+        "fecha": "2026-11-08T13:01:00-03:00",
+        "revisada_por": "admin",
+        "fecha_revision": "2026-11-08T17:01:28+01:00"
+    }
+]

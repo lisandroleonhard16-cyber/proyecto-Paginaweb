@@ -20,8 +20,27 @@
     const boton = document.getElementById('formBoton');
     const descripcion = document.getElementById('descripcion');
     const contador = document.getElementById('contadorDescripcion');
+    const avisoSinSesion = document.getElementById('avisoSinSesion');
 
     let urlPrevia = null;
+
+    // El formulario solo se muestra con sesión iniciada. El estado lo publica
+    // cuenta.js en window.cuentaSesion y con el evento 'cuenta:sesion', así no
+    // depende del orden en que carguen los scripts.
+    function pintarAccesoReceta(usuario) {
+        if (usuario) {
+            form.hidden = false;
+            if (avisoSinSesion) avisoSinSesion.hidden = true;
+        } else {
+            form.hidden = true;
+            if (avisoSinSesion) avisoSinSesion.hidden = false;
+        }
+    }
+
+    pintarAccesoReceta(window.cuentaSesion || null);
+    document.addEventListener('cuenta:sesion', function (e) {
+        pintarAccesoReceta(e.detail || null);
+    });
 
     function mostrarMensaje(texto, esExito) {
         mensaje.textContent = texto;
@@ -87,6 +106,13 @@
             return;
         }
 
+        // La foto es obligatoria: se valida aquí además del required del input y del servidor.
+        if (!inputImagen.files || inputImagen.files.length === 0) {
+            mostrarMensaje('Debes adjuntar una imagen de la receta para poder enviarla.', false);
+            inputImagen.focus();
+            return;
+        }
+
         boton.disabled = true;
         const textoOriginal = boton.textContent;
         boton.textContent = 'Enviando…';
@@ -96,6 +122,12 @@
                 method: 'POST',
                 body: new FormData(form)
             });
+
+            if (respuesta.status === 401) {
+                mostrarMensaje('Debes iniciar sesión o crear una cuenta para enviar una receta.', false);
+                if (window.abrirModalCuenta) window.abrirModalCuenta();
+                return;
+            }
 
             const texto = await respuesta.text();
             let datos = null;
