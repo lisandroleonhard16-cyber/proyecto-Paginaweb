@@ -12,7 +12,7 @@ hamburger.addEventListener('click', () => {
 // Toggle de submenús en móvil
 menuToggles.forEach(toggle => {
     toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 900) {
             e.preventDefault();
             const parent = toggle.parentElement;
             parent.classList.toggle('active');
@@ -24,7 +24,7 @@ menuToggles.forEach(toggle => {
 const navLinks = nav.querySelectorAll('a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 900) {
             hamburger.classList.remove('active');
             nav.classList.remove('active');
         }
@@ -33,7 +33,7 @@ navLinks.forEach(link => {
 
 // Cerrar menú al hacer click fuera
 document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 900) {
         if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
             hamburger.classList.remove('active');
             nav.classList.remove('active');
@@ -56,7 +56,7 @@ actualizarScroll();
 
 // Cerrar menú al cambiar tamaño de pantalla
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 900) {
         hamburger.classList.remove('active');
         nav.classList.remove('active');
     }

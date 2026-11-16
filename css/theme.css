@@ -1,0 +1,169 @@
+/**
+ * THEME.CSS
+ * Sistema visual global: fondo premium (negro + brillos dorados cálidos),
+ * textura de grano y glow unificado en todos los recuadros del sitio.
+ *
+ * Cargar SIEMPRE al final, después de estilos.css y del resto de CSS.
+ * El fondo animado está en background.css (cargar después de este archivo).
+ */
+
+/* ===== VARIABLES DE GLOW (ajustar la intensidad desde aquí) ===== */
+:root {
+    --glow-gold-soft: 0 0 16px rgba(212, 175, 55, 0.16), 0 4px 14px rgba(0, 0, 0, 0.35);
+    --glow-gold-strong: 0 0 28px rgba(212, 175, 55, 0.34), 0 10px 26px rgba(0, 0, 0, 0.45);
+    --glow-emoji: drop-shadow(0 0 5px rgba(255, 214, 110, 0.8)) drop-shadow(0 0 1.5px rgba(212, 175, 55, 0.9));
+    --border-gold: 1px solid rgba(212, 175, 55, 0.55);
+    --glow-transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* El fondo animado vive en background.css (.bg-scene).
+   Aquí solo quedan las variables de glow y los efectos de brillo. */
+
+/* ===== EMOJIS CON BRILLO ===== */
+/* emoji-glow.js envuelve los emojis de texto en <span class="emoji-glow"> */
+.emoji-glow {
+    filter: var(--glow-emoji);
+}
+
+/* ===== GLOW EN RECUADROS Y TARJETAS ===== */
+/* Secciones contenedoras, tarjetas, formularios, modales y panel admin */
+.recetas-recientes,
+.destacados-semana,
+.categorias-section,
+.filosofia-section,
+.contacto-section,
+.seccion-nosotros,
+.contenido_receta,
+.lista-recetas,
+.form-receta,
+.cuenta-modal-caja,
+.aviso-gluten,
+.nos-panel,
+.nos-ficha,
+.nos-persona,
+.nos-valor,
+.nos-hito,
+.hero-receta,
+.stat-card,
+.receta-card,
+.vacio-card {
+    box-shadow: var(--glow-gold-soft);
+    transition: var(--glow-transition);
+}
+
+/* ===== GLOW EN NAVEGACIÓN, MENÚS, WIDGET Y FOOTER ===== */
+.encabezado nav > ul {
+    box-shadow: var(--glow-gold-soft), inset 0 1px 0 rgba(255, 230, 150, 0.15);
+}
+
+.encabezado .submenu {
+    box-shadow: var(--glow-gold-soft);
+}
+
+#cuentaWidget .cw-btn {
+    box-shadow: var(--glow-gold-soft);
+}
+
+#cuentaWidget .cw-dropdown {
+    box-shadow: var(--glow-gold-strong);
+}
+
+.footer {
+    box-shadow: 0 -6px 24px rgba(212, 175, 55, 0.1);
+}
+
+/* ===== GLOW EN BOTONES Y CONTROLES ===== */
+.pestanas,
+.paginacion a,
+.paginacion .actual,
+.acciones-btn,
+.btn-ghost,
+.btn-ver,
+.form-boton,
+.tarjeta-link,
+.nos-boton,
+.form-imagen-boton,
+.hamburger {
+    box-shadow: var(--glow-gold-soft);
+}
+
+/* ===== HOVER: aura más intensa en tarjetas interactivas ===== */
+/* El translateY ya existe en home.css; acá solo se refuerza el halo. */
+.tarjeta-receta:hover,
+.tarjeta-destacada:hover,
+.categoria-card:hover,
+.filosofia-card:hover,
+.stat-card:hover,
+.receta-card:hover,
+.nos-panel:hover,
+.nos-ficha:hover,
+.nos-persona:hover,
+.nos-valor:hover,
+.aviso-gluten:hover {
+    box-shadow: var(--glow-gold-strong);
+}
+
+/* .categoria-card no tenía hover propio: se eleva sutilmente */
+.categoria-card {
+    transition: var(--glow-transition);
+}
+.categoria-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== FOCUS VISIBLE (teclado) ===== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid rgb(212, 175, 55);
+    outline-offset: 2px;
+    box-shadow: var(--glow-gold-soft);
+}
+
+/* ===== FONDOS DE SECCIONES: vidrio esmerilado =====
+   Bajan la opacidad de los paneles grandes para que la escena
+   .bg-scene (background.css) se vea a través, con blur sutil.
+   Las tarjetas internas se mantienen legibles. */
+.recetas-recientes,
+.destacados-semana,
+.categorias-section,
+.filosofia-section {
+    background: linear-gradient(135deg, rgba(26, 24, 21, 0.6), rgba(32, 29, 25, 0.55));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.contacto-section,
+.seccion-nosotros,
+.nos-panel,
+.form-receta {
+    background-color: rgba(30, 30, 30, 0.78);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.contenido_receta,
+main .receta {
+    background-color: rgba(25, 25, 25, 0.92);
+}
+
+.footer {
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.78), rgba(25, 25, 25, 0.72));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.encabezado {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.22));
+}
+
+/* ===== ACCESIBILIDAD: respeta movimiento reducido ===== */
+@media (prefers-reduced-motion: reduce) {
+    .particle {
+        animation: none;
+        opacity: 0;
+    }
+}

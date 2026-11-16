@@ -165,9 +165,11 @@ a {
 }
 
 /* Barra de navegación */
+/* El nav fijo va centrado: se limita su ancho para que nunca llegue
+   al widget de sesión (#cuentaWidget), que es fijo arriba a la derecha */
 .encabezado nav {
     width: 90%;
-    max-width: 850px;
+    max-width: min(850px, calc(100vw - 340px));
     margin: 15px auto 0;
     border-radius: 999px;
     overflow: visible;
@@ -259,7 +261,7 @@ a {
 
 /* ===== NAVBAR FLOTANTE (queda fija arriba al hacer scroll) ===== */
 /* menu.js agrega la clase "con-scroll" al body cuando bajás */
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .encabezado {
         padding-top: 64px;
     }
@@ -280,7 +282,7 @@ a {
     /* Al bajar: más transparente, efecto vidrio y un poco más compacta */
     body.con-scroll .encabezado nav {
         top: 8px;
-        max-width: 800px;
+        max-width: min(800px, calc(100vw - 340px));
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(212, 175, 55, 0.08);
     }
 
@@ -480,7 +482,26 @@ a {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+/* Pantallas medianas: nav más compacto para que quepa junto al widget de sesión */
+@media (max-width: 1100px) {
+    .encabezado nav > ul {
+        gap: 18px;
+        padding: 4px 16px;
+    }
+
+    .encabezado nav > ul > li + li::before {
+        left: -12px;
+    }
+
+    .encabezado nav > ul > li > a,
+    .menu-desplegable .menu-toggle {
+        font-size: 13px;
+        letter-spacing: 1px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 900px) {
     .hamburger {
         display: flex;
         position: fixed;
@@ -583,15 +604,6 @@ a {
     .encabezado h1 {
         font-size: 28px;
         max-width: 80%;
-    }
-
-    .informacion {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .fuentereceta {
-        width: 100%;
     }
 
     .grid-recetas {

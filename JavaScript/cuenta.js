@@ -241,11 +241,18 @@
 
     function pintarWidget(usuario) {
         if (usuario) {
-            let html = '<span class="cw-user">Hola, ' + escapar(usuario.nombre) + '</span>';
+            // Usuario logueado: avatar con inicial + nombre + flecha que
+            // despliega Panel de administración (solo admin) y Cerrar sesión.
+            const inicial = escapar(String(usuario.nombre || '?').trim().charAt(0).toUpperCase() || '?');
+            let html = '<button type="button" class="cw-btn cw-user-btn" data-cw-toggle aria-haspopup="true" aria-expanded="false">' +
+                '<span class="cw-avatar" aria-hidden="true">' + inicial + '</span>' +
+                '<span class="cw-nombre">' + escapar(usuario.nombre) + '</span>' +
+                '<span class="cw-flecha" aria-hidden="true">▾</span></button>' +
+                '<div class="cw-dropdown" hidden>';
             if (usuario.rol === 'admin') {
-                html += '<a class="cw-btn" href="' + API + 'admin.php">Panel</a>';
+                html += '<a class="cw-dd-item" href="' + API + 'admin.php">Panel de administración</a>';
             }
-            html += '<button type="button" class="cw-btn cw-salir" data-logout>Salir</button>';
+            html += '<button type="button" class="cw-dd-item" data-logout>Cerrar sesión</button></div>';
             widget.innerHTML = html;
         } else {
             widget.innerHTML = '<button type="button" class="cw-btn" data-abrir-login>Ingresar</button>';
@@ -253,12 +260,38 @@
     }
 
     widget.addEventListener('click', async function (e) {
+        const toggle = e.target.closest('[data-cw-toggle]');
+        const dropdown = widget.querySelector('.cw-dropdown');
+        if (toggle && dropdown) {
+            const abierto = !dropdown.hidden;
+            dropdown.hidden = abierto;
+            toggle.setAttribute('aria-expanded', String(!abierto));
+            return;
+        }
         const btn = e.target.closest('[data-logout]');
         if (!btn) return;
         try {
             await fetch(API + 'logout.php', { method: 'POST' });
         } catch (_) { /* se actualiza el estado igual */ }
         cargarSesion();
+    });
+
+    // Cierra el menú de usuario al hacer clic fuera del widget o con Escape
+    function cerrarMenuUsuario() {
+        const dropdown = widget.querySelector('.cw-dropdown');
+        if (dropdown && !dropdown.hidden) {
+            dropdown.hidden = true;
+            const toggle = widget.querySelector('[data-cw-toggle]');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    document.addEventListener('click', function (e) {
+        if (!widget.contains(e.target)) cerrarMenuUsuario();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') cerrarMenuUsuario();
     });
 
     async function cargarSesion() {

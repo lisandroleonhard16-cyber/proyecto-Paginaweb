@@ -41,6 +41,8 @@
 }
 
 /* ===== WIDGET FIJO ARRIBA A LA DERECHA ===== */
+/* Sin píldora contenedora: el widget es transparente y cada botón
+   lleva su propio estilo. position:relative ancla el menú desplegable. */
 #cuentaWidget {
     position: fixed;
     top: 14px;
@@ -48,63 +50,141 @@
     z-index: 10001;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 8px 14px;
-    background-color: rgba(20, 20, 20, 0.85);
-    border: 2px solid rgb(212, 175, 55);
-    border-radius: 30px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-}
-
-#cuentaWidget .cw-user {
-    color: rgb(212, 175, 55);
-    font-size: 14px;
-    font-weight: bold;
-    white-space: nowrap;
-    max-width: 160px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    gap: 8px;
 }
 
 #cuentaWidget .cw-btn {
-    display: inline-block;
-    padding: 6px 16px;
-    border: 2px solid rgb(212, 175, 55);
-    border-radius: 20px;
-    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px 6px 8px;
+    border: 1px solid rgba(212, 175, 55, 0.6);
+    border-radius: 30px;
+    background-color: rgba(20, 20, 20, 0.85);
     color: rgb(212, 175, 55);
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     white-space: nowrap;
 }
 
-#cuentaWidget .cw-btn:hover {
-    background-color: rgb(212, 175, 55);
-    color: black;
+#cuentaWidget .cw-btn:hover,
+#cuentaWidget .cw-btn:focus-visible {
+    border-color: rgb(212, 175, 55);
+    color: rgb(255, 230, 150);
+    box-shadow: 0 0 14px rgba(212, 175, 55, 0.35), 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
-/* En móvil el botón hamburguesa ocupa la esquina: el widget baja un poco */
-@media (max-width: 768px) {
+/* Avatar circular con la inicial del usuario */
+#cuentaWidget .cw-avatar {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(170, 130, 30, 0.9));
+    color: #141414;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Botón de usuario logueado: avatar + nombre + flecha, sin "Hola," ni botones sueltos */
+#cuentaWidget .cw-user-btn .cw-nombre {
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#cuentaWidget .cw-flecha {
+    font-size: 11px;
+    transition: transform 0.3s ease;
+}
+
+#cuentaWidget .cw-user-btn[aria-expanded="true"] .cw-flecha {
+    transform: rotate(180deg);
+}
+
+/* Menú desplegable del usuario (Panel / Salir) */
+#cuentaWidget .cw-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 190px;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    background-color: rgba(18, 18, 18, 0.97);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-top: 2px solid rgb(212, 175, 55);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7), 0 0 12px rgba(212, 175, 55, 0.15);
+    z-index: 10003;
+}
+
+#cuentaWidget .cw-dropdown[hidden] {
+    display: none;
+}
+
+#cuentaWidget .cw-dd-item {
+    display: block;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    color: rgb(225, 200, 130);
+    font-family: "Georgia", serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+#cuentaWidget .cw-dd-item:hover {
+    background-color: rgba(212, 175, 55, 0.12);
+    color: rgb(255, 230, 150);
+    padding-left: 18px;
+}
+
+/* En pantallas con hamburguesa el widget baja un poco para no pisarlo;
+   logueado se muestra solo el avatar (sin nombre ni flecha) */
+@media (max-width: 900px) {
     #cuentaWidget {
         top: 64px;
         right: 16px;
-        padding: 6px 10px;
         gap: 6px;
     }
 
-    #cuentaWidget .cw-user {
+    #cuentaWidget .cw-btn {
+        padding: 5px 12px;
         font-size: 12px;
-        max-width: 90px;
     }
 
-    #cuentaWidget .cw-btn {
-        padding: 5px 10px;
+    #cuentaWidget .cw-user-btn {
+        padding: 4px;
+        gap: 0;
+    }
+
+    #cuentaWidget .cw-user-btn .cw-nombre,
+    #cuentaWidget .cw-flecha {
+        display: none;
+    }
+
+    #cuentaWidget .cw-avatar {
+        width: 26px;
+        height: 26px;
         font-size: 12px;
     }
 }
